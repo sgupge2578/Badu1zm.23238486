@@ -1,0 +1,119 @@
+{
+  "generator_mode": "llm",
+  "patterns": [
+    {
+      "pattern_id": "DP-001",
+      "pattern_name": "時間制約中心の分割",
+      "viewpoint": "時間に関連する問題を中心に分割した。",
+      "reason": "時間の制約が家事の負担や子どもとの関わりに直接影響を与えているため、具体的な時間帯での問題を明確にすることが重要である。",
+      "subproblems": [
+        {
+          "subproblem_id": "SP-001",
+          "name": "夕方の時間管理の最適化",
+          "description": "平日17時から20時の時間帯における家事と子どもとの時間の配分を最適化する方法を探る。",
+          "decomposition_axis": "time_constraint",
+          "linked_ir_items": [
+            "problem",
+            "objective"
+          ],
+          "search_intent": "時間管理に関する文献や効率的な家事の方法について調査する。",
+          "constraints": [
+            "平日17時に退社",
+            "保育園迎えの時間が固定"
+          ]
+        },
+        {
+          "subproblem_id": "SP-002",
+          "name": "料理にかかる時間の短縮",
+          "description": "夕食準備にかかる時間を短縮するための具体的な方法や便利な調理器具について調査する。",
+          "decomposition_axis": "time_constraint",
+          "linked_ir_items": [
+            "problem",
+            "objective"
+          ],
+          "search_intent": "料理効率化に関する文献や時短レシピについて探す。",
+          "constraints": [
+            "自炊を優先する価値観",
+            "夕食準備が18時から"
+          ]
+        }
+      ]
+    },
+    {
+      "pattern_id": "DP-002",
+      "pattern_name": "矛盾・トレードオフ中心の分割",
+      "viewpoint": "手作り志向と時間的制約の矛盾を中心に分割した。",
+      "reason": "手作りの納得感と時間の制約との間でどのように折り合いをつけるかが重要なポイントであるため。",
+      "subproblems": [
+        {
+          "subproblem_id": "SP-003",
+          "name": "手作りの納得感を維持するための工夫",
+          "description": "手作り志向を維持しながらも、効率的に料理をするための工夫や方法を探る。",
+          "decomposition_axis": "contradiction",
+          "linked_ir_items": [
+            "contradiction",
+            "objective"
+          ],
+          "search_intent": "手作り料理の工夫や時短レシピに関する情報を探す。",
+          "constraints": [
+            "栄養バランスを重視",
+            "手作りにこだわる"
+          ]
+        },
+        {
+          "subproblem_id": "SP-004",
+          "name": "外食や総菜利用に対する心理的障壁",
+          "description": "外食や総菜を利用することに対する心理的な抵抗を軽減する方法を探る。",
+          "decomposition_axis": "contradiction",
+          "linked_ir_items": [
+            "contradiction",
+            "value"
+          ],
+          "search_intent": "外食や総菜の利用に関する心理的要因や改善策について調査する。",
+          "constraints": [
+            "外食を避けたい価値観",
+            "手作りの納得感を保持"
+          ]
+        }
+      ]
+    },
+    {
+      "pattern_id": "DP-003",
+      "pattern_name": "心理的負担中心の分割",
+      "viewpoint": "心理的な負担に関連する問題を中心に分割した。",
+      "reason": "心理的な負担が子どもとの関わりや仕事のパフォーマンスに影響を与えるため、心理的側面を明確にすることが重要である。",
+      "subproblems": [
+        {
+          "subproblem_id": "SP-005",
+          "name": "家事による心理的ストレスの軽減",
+          "description": "家事に対する心理的負担を軽減するための方法やアイデアを探る。",
+          "decomposition_axis": "psychological_burden",
+          "linked_ir_items": [
+            "problem",
+            "value"
+          ],
+          "search_intent": "家事の心理的負担を軽減するための方法や研究を探す。",
+          "constraints": [
+            "フルタイム勤務のストレス",
+            "夕方の家事集中"
+          ]
+        },
+        {
+          "subproblem_id": "SP-006",
+          "name": "子どもとの情緒的な関わりを増やす方法",
+          "description": "子どもとの関わりを増やすための具体的な方法や環境作りについて調査する。",
+          "decomposition_axis": "psychological_burden",
+          "linked_ir_items": [
+            "objective",
+            "value"
+          ],
+          "search_intent": "親子関係の向上に関する文献や実践例を探す。",
+          "constraints": [
+            "平日夕方の短い時間",
+            "情緒的なつながりを重視"
+          ]
+        }
+      ]
+    }
+  ]
+}

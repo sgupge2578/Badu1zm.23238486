@@ -176,6 +176,93 @@ class ProblemDecompositionResult:
 
 
 # --------------------------------------------------------------------------- #
+# 検索語
+# --------------------------------------------------------------------------- #
+@dataclass
+class SubProblemKeywords:
+    """部分問題 1 件から生成した検索語。
+
+    どの検索語がどの部分問題に由来するかを後からたどれるよう，
+    pattern_id と subproblem_id の組で部分問題と対応づける。
+    （subproblem_id はパターンをまたいで重複し得るため，pattern_id も必ず持つ）
+    """
+
+    pattern_id: str = ""
+    subproblem_id: str = ""
+    subproblem_name: str = ""
+    ja: List[str] = field(default_factory=list)
+    en: List[str] = field(default_factory=list)
+    generator_mode: str = ""  # "llm"（条件 C はルールベース代替を持たない）
+
+    def to_dict(self) -> Dict[str, Any]:
+        """部分問題の検索語を dict 化する（JSON 出力用）。"""
+        return asdict(self)
+
+    def as_keyword_dict(self) -> Dict[str, List[str]]:
+        """既存工程が受け取る {"ja": [...], "en": [...]} 形式で返す。"""
+        return {"ja": list(self.ja), "en": list(self.en)}
+
+
+def _interleave(lists: List[List[str]]) -> List[str]:
+    """複数の語リストを先頭から 1 語ずつ交互に並べ，重複を除いて返す。
+
+    例: [[a1, a2], [b1, b2, b3]] → [a1, b1, a2, b2, b3]
+    """
+    merged: List[str] = []
+    longest = max((len(x) for x in lists), default=0)
+    for i in range(longest):
+        for terms in lists:
+            if i < len(terms) and terms[i] not in merged:
+                merged.append(terms[i])
+    return merged
+
+
+@dataclass
+class KeywordPlan:
+    """検索語生成の結果全体（条件 B / C 共通）。
+
+    * 条件 B: IR 全体から生成した検索語を ir_keywords に持つ
+    * 条件 C: 選択した分割パターンの部分問題ごとの検索語を subproblem_keywords に持つ
+    後続工程（CiNii 検索・種抽出・企画案生成）へは merged() の形式で渡す。
+    """
+
+    condition: str = ""  # "B" / "C"
+    # 条件 C のときだけ使う。どの分割パターンを選んだか，分割結果をどこから得たか
+    pattern_id: str = ""
+    decomposition_source: str = ""  # "generated" または読み込んだ JSON のパス
+    ir_keywords: Dict[str, List[str]] = field(default_factory=dict)
+    subproblem_keywords: List[SubProblemKeywords] = field(default_factory=list)
+
+    def merged(self) -> Dict[str, List[str]]:
+        """後続工程に渡す {"ja": [...], "en": [...]} を返す。
+
+        条件 C では部分問題をまたいで 1 語ずつ交互に並べる。
+        CiNii 検索は先頭から --cinii-queries 語しか使わないため，単純に連結すると
+        最初の部分問題の語だけが検索されてしまうのを防ぐ。
+        """
+        if self.condition != "C":
+            return {
+                "ja": list(self.ir_keywords.get("ja", [])),
+                "en": list(self.ir_keywords.get("en", [])),
+            }
+        return {
+            "ja": _interleave([k.ja for k in self.subproblem_keywords]),
+            "en": _interleave([k.en for k in self.subproblem_keywords]),
+        }
+
+    def to_dict(self) -> Dict[str, Any]:
+        """検索語生成の結果全体を dict 化する（JSON 出力用）。"""
+        return {
+            "condition": self.condition,
+            "pattern_id": self.pattern_id,
+            "decomposition_source": self.decomposition_source,
+            "ir_keywords": self.ir_keywords,
+            "subproblem_keywords": [k.to_dict() for k in self.subproblem_keywords],
+            "merged": self.merged(),
+        }
+
+
+# --------------------------------------------------------------------------- #
 # 外部情報源
 # --------------------------------------------------------------------------- #
 @dataclass
@@ -331,6 +418,10 @@ class GeneratedIdeas:
     # 試行ログ用ID
     trial_id: str = ""
 
+    # 評価実験の条件（"B" / "C"）と，検索語生成の結果全体（部分問題との対応を含む）
+    condition: str = ""
+    keyword_plan: Dict[str, Any] = field(default_factory=dict)
+
     # 問題分割結果
     decomposition: Dict[str, Any] = field(default_factory=dict)
 
@@ -341,6 +432,7 @@ class GeneratedIdeas:
     evaluations: List[IdeaEvaluation] = field(default_factory=list)
 
     # 補助情報（後続工程やデバッグ用。出力 JSON には含めるが評価モジュールは無視可）
+    # keywords は後続工程へ実際に渡した形式（KeywordPlan.merged() の結果）
     keywords: Dict[str, List[str]] = field(default_factory=dict)
     used_source_type: str = ""
     generator_mode: str = ""  # "llm" / "rule-based"
@@ -356,9 +448,11 @@ class GeneratedIdeas:
             "session_id": self.session_id,
             "generated_at": self.generated_at,
             "trial_id": self.trial_id,
+            "condition": self.condition,
             "generator_mode": self.generator_mode,
             "used_source_type": self.used_source_type,
             "keywords": self.keywords,
+            "keyword_plan": self.keyword_plan,
             "input_ir_summary": self.input_ir_summary,
             "decomposition": self.decomposition,
             "seeds": [seed.to_dict() for seed in self.seeds],

@@ -23,6 +23,7 @@ IR（ObjectiveCard）を複数の部分問題に分割する。
 
 from __future__ import annotations
 
+import json
 from typing import Any, Dict, List, Optional, Tuple
 
 from config import AppConfig
@@ -372,3 +373,29 @@ def decompose_problem(
 
     # 4. 出力JSONを内部データ構造へ正規化して返す
     return _parse_decomposition(data, generator_mode="llm")
+
+
+def load_decomposition_json(path: str) -> ProblemDecompositionResult:
+    """保存済みの問題分割結果（write_decomposition_json の出力）を読み込む。
+
+    問題分割は実行のたびに LLM が作り直すため，同じ分割で後続工程を
+    繰り返し実行したい場合（評価実験・動作確認）に使う。
+    読み込み時も LLM 出力と同じ正規化（_parse_decomposition）を通す。
+    generator_mode はファイルに記録された値を引き継ぐ。
+
+    Raises:
+        ProblemDecompositionError: ファイルを読めない，または内容が不正な場合
+    """
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+    except (OSError, ValueError) as exc:
+        raise ProblemDecompositionError(
+            f"問題分割結果の JSON を読み込めません: {path}\n  → {exc}"
+        ) from exc
+
+    generator_mode = ""
+    if isinstance(data, dict):
+        generator_mode = str(data.get("generator_mode") or "").strip()
+
+    return _parse_decomposition(data, generator_mode=generator_mode)

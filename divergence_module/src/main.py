@@ -6,10 +6,14 @@ main.py
 処理の流れ（問題分割AIエージェントを追加した現行版）:
     1. IR を読み込む（ir_loader）
     2. stage=evidence の IR を選び objective_card を抽出する
-    3. IR を複数の部分問題へ分割する（problem_decomposer）
+    3. 【条件 C のみ】IR を複数の部分問題へ分割する（problem_decomposer）
        → 分割は 1 通りではないため、観点の異なる複数パターンを生成する
-    3b. 問題分割の結果を JSON / Markdown で保存する（output_writer）
-    4. IR から検索・発散キーワードを生成する（keyword_generator）
+       → --decomposition-json 指定時は分割を実行せず、保存済みの結果を読み込む
+    3b. 【条件 C のみ】問題分割の結果を JSON / Markdown で保存し（output_writer）、
+        後続へ渡す分割パターンを 1 つ選ぶ（pattern_selector）
+    4. 検索・発散キーワードを生成し、JSON / Markdown で保存する
+        - 条件 B: IR 全体から生成する（keyword_generator）
+        - 条件 C: 選んだパターンの部分問題ごとに生成する（subproblem_keyword_generator）
     5. 外部情報源を用意する
         - --fetch csv  : 手動 CSV を読み込む（source_loader）
         - --fetch cinii: CiNii Research API で自動検索する（source_fetcher）
@@ -19,13 +23,21 @@ main.py
     8. 企画案を JSON と Markdown で保存する（output_writer）
 
 注意:
-    問題分割は AI エージェントの役割として扱うため、ルールベースの代替を持たない。
-    LLM が使えない場合、手順 3 で明示的にエラー終了する（--no-llm では通らない）。
+    問題分割と部分問題ごとの検索語生成は、ルールベースの代替を持たない。
+    条件 C で LLM が使えない場合は明示的にエラー終了する（--no-llm では通らない）。
+    条件 B は従来どおり、LLM が無ければルールベースで最後まで実行する。
 
 コマンド例:
     # 手動 CSV モード（従来）
     python src/main.py --ir data/IR_1215.jsonl --sources data/sources.csv \
         --source-type CiNii --num-ideas 5
+
+    # 保存済みの分割結果を使い、2 番目のパターンで条件 C を実行する
+    python src/main.py --decomposition-json outputs/problem_decomposition.json \
+        --pattern-id DP-002
+
+    # 条件 B（IR 全体から検索語を生成。問題分割は行わない）
+    python src/main.py --condition B
 
     # CiNii 自動検索モード（.env に CINII_APP_ID が必要）
     python src/main.py --ir data/IR_1215.jsonl --fetch cinii \
@@ -46,19 +58,28 @@ from config import load_config                       # noqa: E402
 from ir_loader import load_ir_records, select_ir_record, IRLoadError  # noqa: E402
 from source_loader import load_sources, SourceLoadError              # noqa: E402
 from keyword_generator import generate_keywords      # noqa: E402
+from subproblem_keyword_generator import (            # noqa: E402
+    generate_subproblem_keywords, SubProblemKeywordError,
+)
+from pattern_selector import select_pattern, PatternSelectionError  # noqa: E402
 from idea_seed_extractor import extract_idea_seeds    # noqa: E402
 from idea_generator import generate_ideas             # noqa: E402
-from output_writer import write_outputs, write_decomposition
-from models import GeneratedIdeas                      # noqa: E402
+from output_writer import (                           # noqa: E402
+    write_outputs, write_decomposition, write_keyword_plan,
+)
+from models import GeneratedIdeas, KeywordPlan         # noqa: E402
 from llm_client import build_client, LLMError          # noqa: E402
-from problem_decomposer import decompose_problem, ProblemDecompositionError
+from problem_decomposer import (                       # noqa: E402
+    decompose_problem, load_decomposition_json, ProblemDecompositionError,
+)
 
 
 def parse_args(argv=None) -> argparse.Namespace:
     """コマンドライン引数を解析して Namespace として返す。
 
-    引数は用途ごとに 3 群に分かれる:
+    引数は用途ごとに 4 群に分かれる:
         * 入出力・LLM 有無（--ir / --out-* / --no-llm）
+        * 評価実験の条件と分割パターン（--condition / --pattern-id / --decomposition-json）
         * 外部情報源の取得方法（--fetch と、CSV モード / CiNii モードの各設定）
         * 生成条件（--num-ideas）
     既定値だけで data/IR_1215.jsonl と data/sources.csv を使って動くようにしている。
@@ -81,8 +102,26 @@ def parse_args(argv=None) -> argparse.Namespace:
         default="outputs/problem_decomposition.md",
         help="問題分割結果のMarkdown出力先",
     )
+    p.add_argument(
+        "--out-keywords-json",
+        default="outputs/keyword_plan.json",
+        help="検索語生成結果のJSON出力先",
+    )
+    p.add_argument(
+        "--out-keywords-md",
+        default="outputs/keyword_plan.md",
+        help="検索語生成結果のMarkdown出力先",
+    )
     p.add_argument("--no-llm", action="store_true",
-                   help="API キーがあっても LLM を使わずルールベースで生成する")
+                   help="API キーがあっても LLM を使わずルールベースで生成する（条件 B のみ）")
+
+    # 評価実験の条件と、条件 C で使う分割パターン
+    p.add_argument("--condition", choices=["B", "C"], default="C",
+                   help="B=IR全体から検索語を生成 / C=問題分割し部分問題ごとに検索語を生成")
+    p.add_argument("--pattern-id", default=None,
+                   help="条件Cで使う分割パターンのID（例: DP-002）。省略時は先頭のパターン")
+    p.add_argument("--decomposition-json", default=None,
+                   help="条件Cで、問題分割を実行せずに読み込む保存済みの分割結果JSON")
 
     # 外部情報源の取得方法
     p.add_argument("--fetch", choices=["csv", "cinii"], default="csv",
@@ -105,7 +144,12 @@ def parse_args(argv=None) -> argparse.Namespace:
     p.add_argument("--no-cache", action="store_true", help="CiNii 取得のキャッシュを使わない")
     p.add_argument("--save-fetched", default="data/sources_fetched.csv",
                    help="CiNii 取得結果を保存する CSV パス")
-    return p.parse_args(argv)
+    args = p.parse_args(argv)
+
+    # 条件 B は問題分割を使わないため、分割に関する指定は黙って無視せずエラーにする
+    if args.condition == "B" and (args.pattern_id or args.decomposition_json):
+        p.error("--pattern-id / --decomposition-json は --condition C のときだけ指定できます。")
+    return args
 
 
 def main(argv=None) -> int:
@@ -149,47 +193,98 @@ def main(argv=None) -> int:
           f"(全 {len(records)} 件中)")
     card = ir.objective_card
 
-    # 3. 問題分割
-    # 検索語をいきなり作らず、まず IR を複数パターンの部分問題へ分割する。
-    # 問題分割は AI エージェントの役割のため、LLM が無い場合はここで停止する。
-    try:
-        decomposition = decompose_problem(
-            card,
-            client=client,
-            config=config,
-            num_patterns=3,
-        )
-    except ProblemDecompositionError as exc:
-        print(f"[エラー] 問題分割失敗:\n{exc}", file=sys.stderr)
-        return 1
+    print(f"[info] 実験条件: {args.condition}")
 
-    print(
-        f"[info] 問題分割: {len(decomposition.patterns)} パターン生成 "
-        f"(mode={decomposition.generator_mode})"
-    )
+    # 3〜4. 検索語生成
+    # 条件 B は IR 全体から、条件 C は問題分割の部分問題ごとに検索語を作る。
+    # どちらも KeywordPlan にまとめ、検索語と部分問題の対応を保存する。
+    decomposition = None
+    pattern = None
+    if args.condition == "C":
+        # 3. 問題分割
+        # 検索語をいきなり作らず、まず IR を複数パターンの部分問題へ分割する。
+        # 問題分割は AI エージェントの役割のため、LLM が無い場合はここで停止する。
+        # 保存済みの分割結果が指定された場合は分割を実行せず、それを使う
+        # （同じ分割で後続工程を繰り返し実行できるようにするため）。
+        try:
+            if args.decomposition_json:
+                decomposition = load_decomposition_json(args.decomposition_json)
+                decomposition_source = args.decomposition_json
+            else:
+                decomposition = decompose_problem(
+                    card,
+                    client=client,
+                    config=config,
+                    num_patterns=3,
+                )
+                decomposition_source = "generated"
+        except ProblemDecompositionError as exc:
+            print(f"[エラー] 問題分割失敗:\n{exc}", file=sys.stderr)
+            return 1
 
-    # 生成された分割パターンの一覧を表示し、試行錯誤の過程を追えるようにする
-    for pattern in decomposition.patterns:
         print(
-            f"  - {pattern.pattern_id}: {pattern.pattern_name} "
-            f"({len(pattern.subproblems)} subproblems)"
+            f"[info] 問題分割: {len(decomposition.patterns)} パターン "
+            f"(mode={decomposition.generator_mode}, 出どころ={decomposition_source})"
         )
 
-    # 3b. 問題分割結果の保存
-    # 企画案とは別ファイルに残し、分割の妥当性を単独でレビューできるようにする。
-    write_decomposition(
-        decomposition,
-        json_path=args.out_decomposition_json,
-        md_path=args.out_decomposition_md,
-    )
+        # 分割パターンの一覧を表示し、試行錯誤の過程を追えるようにする
+        for dp in decomposition.patterns:
+            print(f"  - {dp.pattern_id}: {dp.pattern_name} ({len(dp.subproblems)} subproblems)")
 
-    print(
-        f"[info] 問題分割結果を保存: "
-        f"{args.out_decomposition_json}, {args.out_decomposition_md}"
-    )
+        # 3b. 問題分割結果の保存
+        # 企画案とは別ファイルに残し、分割の妥当性を単独でレビューできるようにする。
+        # 読み込んだ場合も、この実行で使った分割として outputs/ に残す。
+        write_decomposition(
+            decomposition,
+            json_path=args.out_decomposition_json,
+            md_path=args.out_decomposition_md,
+        )
+        print(
+            f"[info] 問題分割結果を保存: "
+            f"{args.out_decomposition_json}, {args.out_decomposition_md}"
+        )
 
-    # 4. キーワード生成（検索にも使うので情報源取得より先に行う）
-    keywords = generate_keywords(card, client=client, config=config)
+        # 後続へ渡す分割パターンを 1 つ選ぶ（作業 2 で選択機能に置き換える予定）
+        try:
+            pattern = select_pattern(decomposition, args.pattern_id)
+        except PatternSelectionError as exc:
+            print(f"[エラー] 分割パターンの選択に失敗:\n{exc}", file=sys.stderr)
+            return 1
+        print(f"[info] 分割パターン選択: {pattern.pattern_id} ({pattern.pattern_name})")
+
+        # CiNii 検索は先頭から --cinii-queries 語しか使わないため、
+        # 部分問題の数より少ないと、検索されない部分問題が出る
+        if args.fetch == "cinii" and args.cinii_queries < len(pattern.subproblems):
+            print(
+                f"[警告] --cinii-queries ({args.cinii_queries}) が部分問題の数 "
+                f"({len(pattern.subproblems)}) より少ないため、"
+                "検索語が使われない部分問題が出ます。"
+            )
+
+        # 4. 部分問題ごとのキーワード生成（ルールベースの代替は持たない）
+        try:
+            plan = generate_subproblem_keywords(
+                card, pattern, client=client, config=config,
+                decomposition_source=decomposition_source,
+            )
+        except SubProblemKeywordError as exc:
+            print(f"[エラー] 部分問題ごとの検索語生成に失敗:\n{exc}", file=sys.stderr)
+            return 1
+        for k in plan.subproblem_keywords:
+            print(f"[info] 検索語 {k.subproblem_id}: ja={k.ja} / en={k.en}")
+    else:
+        # 4. IR 全体からのキーワード生成（LLM が無ければルールベース）
+        plan = KeywordPlan(
+            condition="B",
+            ir_keywords=generate_keywords(card, client=client, config=config),
+        )
+
+    # 検索語と部分問題の対応を保存する（後から検索経路をたどれるように）
+    write_keyword_plan(plan, args.out_keywords_json, args.out_keywords_md, pattern=pattern)
+    print(f"[info] 検索語生成結果を保存: {args.out_keywords_json}, {args.out_keywords_md}")
+
+    # 後続工程へは従来どおりの {"ja": [...], "en": [...]} 形式で渡す
+    keywords = plan.merged()
     print(f"[info] キーワード: ja={len(keywords['ja'])}件, en={len(keywords['en'])}件 "
           f"/ ja={keywords['ja']}")
 
@@ -253,6 +348,9 @@ def main(argv=None) -> int:
         generated_at=_dt.datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
         input_ir_summary=card.summary_dict(),
         ideas=ideas,
+        condition=args.condition,
+        keyword_plan=plan.to_dict(),
+        decomposition=decomposition.to_dict() if decomposition is not None else {},
         keywords=keywords,
         used_source_type=used_source_type,
         generator_mode=mode,

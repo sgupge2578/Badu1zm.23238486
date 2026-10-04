@@ -12,9 +12,15 @@ from __future__ import annotations
 
 import json
 import os
-from typing import List
+from typing import List, Optional
 
-from models import GeneratedIdeas, Idea, ProblemDecompositionResult
+from models import (
+    DecompositionPattern,
+    GeneratedIdeas,
+    Idea,
+    KeywordPlan,
+    ProblemDecompositionResult,
+)
 
 
 def _ensure_dir(path: str) -> None:
@@ -113,6 +119,7 @@ def write_markdown(generated: GeneratedIdeas, path: str) -> None:
     lines.append("")
     lines.append(f"- session_id: `{generated.session_id}`")
     lines.append(f"- generated_at: {generated.generated_at}")
+    lines.append(f"- condition: {generated.condition or '（指定なし）'}")
     lines.append(f"- generator_mode: `{generated.generator_mode}`")
     lines.append(f"- used_source_type: {generated.used_source_type or '（指定なし）'}")
     lines.append("")
@@ -246,3 +253,107 @@ def write_decomposition(
 
     write_decomposition_json(decomposition, json_path)
     write_decomposition_markdown(decomposition, md_path)
+
+
+def _unique_ratio(terms: List[str], others: List[str]) -> str:
+    """terms のうち others に出てこない語の割合を「k/n」の形で返す。"""
+    if not terms:
+        return "0/0"
+    unique = [t for t in terms if t not in others]
+    return f"{len(unique)}/{len(terms)}"
+
+
+def _keyword_plan_to_md(
+    plan: KeywordPlan,
+    pattern: Optional[DecompositionPattern] = None,
+) -> str:
+    """検索語生成の結果を Markdown 形式の文字列に変換する。
+
+    条件 C では，部分問題ごとに検索意図・制約条件・検索語を並べ，
+    他の部分問題と重複しない語の割合も示す。
+    「部分問題ごとに異なる検索語が生成されているか」を確認するため。
+    """
+    lines: List[str] = []
+    lines.append("# 検索語生成結果")
+    lines.append("")
+    lines.append(f"- condition: {plan.condition}")
+
+    if plan.condition != "C":
+        # 条件 B: IR 全体から生成した検索語だけを示す
+        lines.append("- 入力: IR 全体")
+        lines.append("")
+        lines.append("## 検索語")
+        lines.append(f"- 日本語: {', '.join(plan.ir_keywords.get('ja', [])) or '（なし）'}")
+        lines.append(f"- 英語: {', '.join(plan.ir_keywords.get('en', [])) or '（なし）'}")
+        lines.append("")
+        return "\n".join(lines)
+
+    lines.append(f"- 分割パターン: {plan.pattern_id}"
+                 + (f"（{pattern.pattern_name}）" if pattern is not None else ""))
+    lines.append(f"- 分割結果の出どころ: {plan.decomposition_source}")
+    lines.append(f"- 部分問題数: {len(plan.subproblem_keywords)}")
+    lines.append("")
+
+    # 部分問題 ID から SubProblem を引けるようにする（検索意図・制約条件の表示用）
+    subproblems = {}
+    if pattern is not None:
+        subproblems = {sp.subproblem_id: sp for sp in pattern.subproblems}
+
+    # 1. 部分問題ごとの一覧表（重複の少なさを一目で確認するため）
+    lines.append("## 部分問題ごとの検索語")
+    lines.append("")
+    lines.append("| 部分問題 | 日本語 | 英語 | 固有語（ja） | 固有語（en） |")
+    lines.append("|---|---|---|---|---|")
+    for k in plan.subproblem_keywords:
+        other_ja = [t for o in plan.subproblem_keywords if o is not k for t in o.ja]
+        other_en = [t for o in plan.subproblem_keywords if o is not k for t in o.en]
+        lines.append(
+            f"| {k.subproblem_id}: {k.subproblem_name} "
+            f"| {', '.join(k.ja)} | {', '.join(k.en)} "
+            f"| {_unique_ratio(k.ja, other_ja)} | {_unique_ratio(k.en, other_en)} |"
+        )
+    lines.append("")
+    lines.append("固有語: 他の部分問題の検索語に出てこない語の数 / その部分問題の語数")
+    lines.append("")
+
+    # 2. 部分問題ごとの詳細（検索語と，検索語に含めなかった制約条件の対応）
+    for k in plan.subproblem_keywords:
+        lines.append(f"### {k.subproblem_id}: {k.subproblem_name}")
+        lines.append("")
+        sp = subproblems.get(k.subproblem_id)
+        if sp is not None:
+            lines.append(f"- 検索意図: {sp.search_intent}")
+            constraints = ", ".join(sp.constraints) or "（なし）"
+            lines.append(f"- 制約条件（検索語には含めず保持）: {constraints}")
+        lines.append(f"- 生成モード: `{k.generator_mode}`")
+        lines.append(f"- 日本語: {', '.join(k.ja)}")
+        lines.append(f"- 英語: {', '.join(k.en)}")
+        lines.append("")
+
+    # 3. 後続工程へ実際に渡した順序（部分問題をまたいで交互に並べたもの）
+    merged = plan.merged()
+    lines.append("## 後続工程へ渡す検索語（部分問題をまたいで交互に並べた順）")
+    lines.append("")
+    lines.append(f"- 日本語: {', '.join(merged['ja']) or '（なし）'}")
+    lines.append(f"- 英語: {', '.join(merged['en']) or '（なし）'}")
+    lines.append("")
+    return "\n".join(lines)
+
+
+def write_keyword_plan(
+    plan: KeywordPlan,
+    json_path: str,
+    md_path: str,
+    pattern: Optional[DecompositionPattern] = None,
+) -> None:
+    """検索語生成の結果を JSON と Markdown の両方で保存する。
+
+    pattern を渡すと，Markdown に部分問題の検索意図と制約条件も併記する。
+    """
+    _ensure_dir(json_path)
+    with open(json_path, "w", encoding="utf-8") as f:
+        json.dump(plan.to_dict(), f, ensure_ascii=False, indent=2)
+
+    _ensure_dir(md_path)
+    with open(md_path, "w", encoding="utf-8") as f:
+        f.write(_keyword_plan_to_md(plan, pattern))
