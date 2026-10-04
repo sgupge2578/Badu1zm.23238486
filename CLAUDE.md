@@ -2,6 +2,11 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## 研究コンテキスト
+
+研究の背景・方針・作業計画は @docs/research_context.md を参照すること。
+詳細な経緯が必要な場合のみ docs/reference/研究成果まとめ_0830.md を読むこと。
+
 ## 概要
 
 コードはすべて `divergence_module/` にある。これは「生成AIを用いたソフトウェア企画支援ツール」の **3 番目の工程（発散）** を担うモジュールである。入力は前段の工程（1. 問題意識抽出、2. 根拠付与）が作る **IR（中間表現）** で、外部情報源（CiNii、今後は Scopus・特許DB）は**補助的な材料**として使う。出力はソフトウェア企画案 3〜5 件の JSON と Markdown で、後続の評価・収束モジュールが読み込む。
