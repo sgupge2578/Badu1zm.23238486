@@ -12,18 +12,34 @@ CiNii・Scopus・特許DB 等から得た外部情報源（文献・特許）を
 
 ---
 
-## パイプライン（縦切り 1 本）
+## パイプライン
+
+評価実験の条件を `--condition` で切り替えます（既定は `C`）。
 
 ```
-1. IR を読み込む                         (ir_loader)
-2. stage=evidence の IR を選び objective_card を抽出 (ir_loader)
-3. 外部情報源 CSV を読み込む               (source_loader)
-4. IR から検索・発散キーワードを生成         (keyword_generator)
-5. 外部情報源からアイデアの種を抽出          (idea_seed_extractor)
-6. IR とアイデアの種から企画案を 3〜5 件生成   (idea_generator)
-7. 各案に対応 IR 項目・参照情報源を付与       (idea_generator)
-8. JSON と Markdown で保存                 (output_writer)
+1. IR を読み込む                                   (ir_loader)
+2. stage=evidence の IR を選び objective_card を抽出   (ir_loader)
+3. 【条件C】IR を複数パターンの部分問題へ分割          (problem_decomposer)
+   ・--decomposition-json 指定時は分割せず保存済みの結果を読み込む
+   ・後続へ渡す分割パターンを 1 つ選ぶ                (pattern_selector)
+4. 検索・発散キーワードを生成
+   ・条件B: IR 全体から生成                         (keyword_generator)
+   ・条件C: 選んだパターンの部分問題ごとに生成          (subproblem_keyword_generator)
+5. 外部情報源を用意（CSV / CiNii 自動検索）          (source_loader / source_fetcher)
+6. 外部情報源からアイデアの種を抽出                  (idea_seed_extractor)
+7. IR とアイデアの種から企画案を 3〜5 件生成           (idea_generator)
+8. JSON と Markdown で保存                         (output_writer)
 ```
+
+| 条件 | 処理構成 |
+|------|----------|
+| B | IR → 検索語 → 外部文献 → 種 → 企画案 |
+| C | IR → 問題分割 → 部分問題 → 検索語 → 外部文献 → 種 → 企画案（提案手法） |
+
+条件C では、部分問題ごとに LLM で検索語（日本語・英語 各 3〜5 語）を生成し、
+`outputs/keyword_plan.{json,md}` に「どの検索語がどの部分問題に由来するか」を保存します。
+後続工程（CiNii 検索・種抽出・企画案生成）へは、部分問題をまたいで 1 語ずつ交互に並べた
+検索語を渡します（CiNii 検索は先頭から `--cinii-queries` 語だけを使うため）。
 
 ---
 
@@ -38,23 +54,27 @@ cp .env.example .env
 #   .env の OPENAI_API_KEY を設定。互換 API を使うなら OPENAI_BASE_URL も設定。
 ```
 
-> **API キーが無くても動きます。** その場合は LLM を使わず、IR と外部情報源を
-> 構造的に組み合わせる**ルールベース生成**にフォールバックして縦切りを通します。
-> まず動作確認 → その後 `.env` を設定して LLM 生成へ、という順で進められます。
+> **API キーが無い場合は、条件B（`--condition B`）だけが動きます。** 条件B は LLM を使わず、
+> IR と外部情報源を構造的に組み合わせる**ルールベース生成**にフォールバックして最後まで実行します。
+> 条件C（既定）の問題分割と部分問題ごとの検索語生成はルールベースの代替を持たないため、
+> LLM が使えない・失敗した場合はエラー終了します（LLM 由来とルール由来の出力を混ぜないため）。
 
 ---
 
 ## 実行方法
 
 ```bash
-# CiNii のみを使って 5 件生成（手動CSVモード）
+# 条件C（既定）: 問題分割 → 先頭の分割パターンの部分問題ごとに検索語を生成
 python src/main.py --ir data/IR_1215.jsonl --sources data/sources.csv --source-type CiNii --num-ideas 5
 
-# source_type を指定せず全情報源を使う
-python src/main.py --num-ideas 4
+# 条件C: 保存済みの分割結果を読み込み（問題分割は実行しない）、DP-002 を使う
+python src/main.py --decomposition-json data/decompositions/IR_1215_decomposition_1005.json --pattern-id DP-002
 
-# API キーがあっても LLM を使わずルールベースで動かす
-python src/main.py --no-llm
+# 条件B: IR 全体から検索語を生成（問題分割は実行しない）
+python src/main.py --condition B
+
+# 条件B を LLM を使わずルールベースで動かす（条件C では使えない）
+python src/main.py --condition B --no-llm
 
 # CiNii Research を自動検索して発散（.env に CINII_APP_ID が必要）
 python src/main.py --fetch cinii --cinii-queries 4 --cinii-count 10 --max-sources 12 --num-ideas 5
@@ -65,10 +85,13 @@ python src/main.py --fetch cinii --cinii-queries 4 --cinii-count 10 --max-source
 | 引数 | 既定値 | 説明 |
 |------|--------|------|
 | `--ir` | `data/IR_1215.jsonl` | IR ファイル（JSONL / 整形 JSON 両対応） |
+| `--condition` | `C` | 評価実験の条件。`B`=IR 全体から検索語を生成 / `C`=問題分割し部分問題ごとに生成 |
+| `--pattern-id` | なし（先頭） | 条件C で使う分割パターンの ID（例: `DP-002`）。条件B では指定不可 |
+| `--decomposition-json` | なし | 条件C で、問題分割を実行せずに読み込む保存済みの分割結果 JSON。条件B では指定不可 |
 | `--fetch` | `csv` | 情報源の取得方法。`csv`=手動CSV / `cinii`=CiNii Research自動検索 |
 | `--sources` | `data/sources.csv` | 外部情報源 CSV（`--fetch csv` 時） |
 | `--source-type` | なし（全件） | CSVモードでの絞り込み（`CiNii` / `Scopus` / `Patent`） |
-| `--cinii-queries` | `4` | 検索に使うキーワード数（1語ずつ検索しマージ） |
+| `--cinii-queries` | `4` | 検索に使うキーワード数（1語ずつ検索しマージ）。条件C で部分問題数より少ないと警告 |
 | `--cinii-count` | `10` | 1キーワードあたりの取得件数（1〜200） |
 | `--max-sources` | `12` | マージ後に採用する情報源の最大件数 |
 | `--from-year` / `--until-year` | なし | 出版年の範囲（YYYY / YYYYMM） |
@@ -77,7 +100,13 @@ python src/main.py --fetch cinii --cinii-queries 4 --cinii-count 10 --max-source
 | `--num-ideas` | `5` | 生成数（3〜5 にクランプ） |
 | `--out-json` | `outputs/generated_ideas.json` | JSON 出力先 |
 | `--out-md` | `outputs/generated_ideas.md` | Markdown 出力先 |
-| `--no-llm` | off | LLM を使わずルールベース生成 |
+| `--out-decomposition-json` / `--out-decomposition-md` | `outputs/problem_decomposition.{json,md}` | 問題分割結果の出力先（条件C） |
+| `--out-keywords-json` / `--out-keywords-md` | `outputs/keyword_plan.{json,md}` | 検索語生成結果の出力先 |
+| `--no-llm` | off | LLM を使わずルールベース生成（条件B のみ） |
+
+`--pattern-id` の ID は問題分割の実行ごとに内容が変わります（毎回 LLM が分割を作り直すため）。
+同じ分割で繰り返し実行したい場合は、`outputs/problem_decomposition.json` などを
+`--decomposition-json` で読み込んでください。
 
 各モジュールは単体実行でも動作確認できます:
 
@@ -98,13 +127,17 @@ divergence_module/
   data/
     IR_1215.jsonl        # 先行研究から提供された実 IR（サンプル入力）
     sources.csv          # 外部情報源サンプル（CiNii/Scopus/Patent）
+    decompositions/      # 保存済みの問題分割結果（--decomposition-json で読み込む）
   outputs/               # 生成結果（JSON / Markdown）
   src/
     main.py              # CLI エントリポイント（パイプライン統合）
     ir_loader.py         # IR 読み込み・選定・objective_card 抽出
     source_loader.py     # 外部情報源 CSV 読み込み
     source_fetcher.py    # CiNii Research API 自動検索 → Source 正規化（--fetch cinii）
-    keyword_generator.py # 日英キーワード生成
+    problem_decomposer.py # 問題分割AIエージェント・保存済み分割結果の読み込み
+    pattern_selector.py  # 後続へ渡す分割パターンの選択（--pattern-id）
+    keyword_generator.py # 日英キーワード生成（条件B: IR 全体から）
+    subproblem_keyword_generator.py # 部分問題ごとの日英キーワード生成（条件C）
     idea_seed_extractor.py # アイデアの種抽出
     idea_generator.py    # 企画案生成（プロンプト構築 + 生成）
     output_writer.py     # JSON / Markdown 出力
@@ -230,6 +263,9 @@ CINII_APP_ID=（取得した appid）
 ```
 
 同じ内容を人間向けに整形した `outputs/generated_ideas.md` も同時に出力されます。
+
+出力 JSON には、上記のほかに `condition`（`B` / `C`）、`keyword_plan`（部分問題ごとの検索語と
+後続へ渡した検索語）、`decomposition`（条件C で使った分割結果）も含まれます。
 
 ---
 
