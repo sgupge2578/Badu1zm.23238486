@@ -1,0 +1,8 @@
+source_id,source_type,title,abstract,keywords,url
+S001,CiNii,共働き世帯における夕食準備の時間負担と家事分担に関する調査,共働き家庭の平日夕方の家事集中を時間使用調査で分析し、調理・片付けが子どもとの関わり時間を圧迫する構造を明らかにした。役割分担と段取りの可視化が負担感の軽減に寄与する可能性を示す。,共働き;家事分担;時間使用;夕食準備;育児,https://example.org/cinii/S001
+S002,CiNii,作り置き・下味冷凍を活用した平日調理の負荷軽減効果,週末の仕込み（下味冷凍）と平日のオーブン調理を組み合わせることで、平日の調理時間と洗い物が減り、心理的余裕が向上したとする実践報告。,下味冷凍;作り置き;調理時間;ミールプレップ;負担軽減,https://example.org/cinii/S002
+S003,CiNii,家庭内タスクの可視化とリマインドが家事遂行に与える影響,家事タスクをタイムライン上に可視化し通知でリマインドする介入により、タスクの取りこぼしと焦りが減少した事例研究。習慣化の観点から行動定着の条件を考察する。,タスク可視化;通知;リマインド;習慣化;行動変容,https://example.org/cinii/S003
+S004,CiNii,栄養バランスと簡便性を両立する献立推薦に関する研究,主食・主菜・副菜・汁物のバランスを保ちつつ調理時間を抑える献立を推薦する手法を検討。利用者の許容する簡便化の範囲を考慮した推薦の必要性を指摘する。,献立推薦;栄養バランス;簡便調理;レコメンド;食事計画,https://example.org/cinii/S004
+S005,Scopus,A Recommender System for Time-Constrained Meal Planning in Households,Proposes a recommendation approach that optimizes weeknight meal plans under time constraints while preserving nutritional balance and perceived home-cooking value. Evaluates trade-offs between convenience and satisfaction.,meal planning;recommender system;time constraints;nutrition;household,https://example.org/scopus/S005
+S006,Scopus,Behavior Change Support Systems for Daily Routine Habit Formation,"Reviews behavior change support systems that use scheduling, prompts, and self-monitoring to help users form stable daily routines, and discusses design factors affecting adherence.",behavior change;habit formation;self-monitoring;scheduling;persuasive technology,https://example.org/scopus/S006
+S007,Patent,家事タスクの分担と進捗を共有する情報処理装置,家庭内の家事タスクを担当者へ割り当て、進捗状況を複数端末間でリアルタイム共有し、未完了タスクを通知する情報処理装置およびプログラム。,家事分担;進捗共有;通知;マルチデバイス;タスク管理,https://example.org/patent/S007

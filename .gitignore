@@ -1,0 +1,21 @@
+# Environment variables / API keys
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# Outputs / logs
+outputs/
+*.log
+
+# Claude Code（個人設定のみ除外。settings.json は共有可）
+.claude/settings.local.json
+
+# Editor / OS
+.vscode/
+.DS_Store

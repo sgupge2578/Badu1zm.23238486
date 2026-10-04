@@ -1,0 +1,440 @@
+{
+  "@context": {
+    "@vocab": "http://purl.org/rss/1.0/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "dc": "http://purl.org/dc/elements/1.1/",
+    "prism": "http://prismstandard.org/namespaces/basic/2.0/",
+    "ndl": "http://ndl.go.jp/dcndl/terms",
+    "opensearch": "http://a9.com/-/spec/opensearch/1.1/",
+    "cir": "https://cir.nii.ac.jp/schema/1.0/",
+    "@language": "ja"
+  },
+  "@id": "https://cir.nii.ac.jp/opensearch/articles?q=%E5%85%B1%E5%83%8D%E3%81%8D%20%E5%AE%B6%E4%BA%8B%E6%99%82%E9%96%93&count=10&start=1&sortorder=4&lang=ja&format=json",
+  "@type": "channel",
+  "title": "CiNii Research articles - 共働き 家事時間 10 1 4 ja json",
+  "description": "CiNii Research articles - 共働き 家事時間 10 1 4 ja json",
+  "link": {
+    "@id": "https://cir.nii.ac.jp/opensearch/articles?q=%E5%85%B1%E5%83%8D%E3%81%8D%20%E5%AE%B6%E4%BA%8B%E6%99%82%E9%96%93&count=10&start=1&sortorder=4&lang=ja&format=json"
+  },
+  "dc:date": "2026-06-16T13:42:51.527+09:00",
+  "opensearch:totalResults": 9,
+  "opensearch:startIndex": 1,
+  "opensearch:itemsPerPage": 9,
+  "items": [
+    {
+      "@id": "https://cir.nii.ac.jp/crid/1390282681307723520",
+      "@type": "item",
+      "title": "就労形態からみた共働き主婦の研究",
+      "link": {
+        "@id": "https://cir.nii.ac.jp/crid/1390282681307723520"
+      },
+      "rdfs:seeAlso": {
+        "@id": "https://cir.nii.ac.jp/crid/1390282681307723520.json"
+      },
+      "dc:creator": [
+        "横山 シヅ"
+      ],
+      "dc:publisher": "一般社団法人 日本家政学会",
+      "dc:type": "Article",
+      "prism:publicationName": "家政学雑誌",
+      "prism:issn": "0449-9069",
+      "prism:volume": "25",
+      "prism:number": "7",
+      "prism:startingPage": "537",
+      "prism:endingPage": "544",
+      "prism:publicationDate": "1974",
+      "description": "Continuing from the last report, a time study was done among 128 married nurses working in six public hospitals in Sendai (exclusive of the ones researched last time) in August, 1972.<BR>In all three types of day-time, semi-night and night-time work, the time spent for living of married nurses was almost the same as the results of the last report. This time analysis was done according to the family life cycle stages. The time spent for house work of the married nurses who have children under support is the longest, so their time for health and free time is shortened. Also when use of time for these nurses was compared with that of the ordinary working wives according to the working days and days off, it was found that the nurses' working hours in the day-time shift were one and half hours longer than the ordinary working wives'. No difference was noticed among the time spent for house work of the two. However, a great difference of two hours was found in free time. On the days off, both nurses' and ordinary working wives' time spent for health, house work and free time gets longer. But nurses spend a longer time for house work, and their free time is shorter than the ordinary working wives. Almost no change in labor conditions were found in this research than those of 1970, and no signs of improvement were evident.",
+      "abstractLicenseFlag": "disallow",
+      "dc:identifier": [
+        {
+          "@type": "cir:DOI",
+          "@value": "10.11428/jhej1951.25.537"
+        },
+        {
+          "@type": "cir:NAID",
+          "@value": "130003716689"
+        },
+        {
+          "@type": "cir:URI",
+          "@value": "https://search.jamas.or.jp/link/ui/1975087680"
+        }
+      ],
+      "dc:source": [
+        {
+          "@id": "https://search.jamas.or.jp/link/ui/1975087680"
+        }
+      ]
+    },
+    {
+      "@id": "https://cir.nii.ac.jp/crid/1390001206330539648",
+      "@type": "item",
+      "title": "夫妻の生活時間構造の質的検討",
+      "link": {
+        "@id": "https://cir.nii.ac.jp/crid/1390001206330539648"
+      },
+      "rdfs:seeAlso": {
+        "@id": "https://cir.nii.ac.jp/crid/1390001206330539648.json"
+      },
+      "dc:creator": [
+        "大竹 美登利",
+        "天野 寛子",
+        "伊藤 セツ"
+      ],
+      "dc:publisher": "一般社団法人 日本家政学会",
+      "dc:type": "Article",
+      "prism:publicationName": "家政学雑誌",
+      "prism:issn": "0449-9069",
+      "prism:volume": "31",
+      "prism:number": "3",
+      "prism:startingPage": "214",
+      "prism:endingPage": "222",
+      "prism:publicationDate": "1980",
+      "description": "From investigation of time budgets in September 1975, of 200 couples where husbands are teachers, and wives are employed or non-employed and living in Tokyo, we re-calculated former data by several methods to study the quality of time budgets.<BR>The following results were obtained.<BR>1) Housework time of the family is the housework time done by both husbands and wives. Percentage of husbands' time working in the family for week days was 14% in the homes of employed wives, and 2.5% in the homes of non-employed wives.<BR>2) Couples where husbands did housework were selected, and the average hours of the person who did housework were analyzed. Results were 65 min for employed wive's family, and 36 min for non-employed wives'.<BR>3) The duration of time per action in time budgets of wives as analyzed by a “Scale of Time Fragmentation” showed that their durations were short during the earlier stages of their life cycle.<BR>4) The “Time Belt” restriction of cooking, house-cleaning and laundry showed a gradual decline.<BR>5) Joint activity time of 20 couples according to life stages were analyzed. Time spent together in the home of employed wives was more than in the home of non-employed wives. The time that husbands did housework and wives did other than housework in the home of employed wives was more than in the home of non-employed wives.",
+      "abstractLicenseFlag": "disallow",
+      "dc:identifier": [
+        {
+          "@type": "cir:DOI",
+          "@value": "10.11428/jhej1951.31.214"
+        },
+        {
+          "@type": "cir:NAID",
+          "@value": "130003717021"
+        }
+      ]
+    },
+    {
+      "@id": "https://cir.nii.ac.jp/crid/1390282681311027712",
+      "@type": "item",
+      "title": "共働き家庭における家事分担と家事による居間空間の重層的利用",
+      "link": {
+        "@id": "https://cir.nii.ac.jp/crid/1390282681311027712"
+      },
+      "rdfs:seeAlso": {
+        "@id": "https://cir.nii.ac.jp/crid/1390282681311027712.json"
+      },
+      "dc:creator": [
+        "萩原 美智子",
+        "北浦 かほる"
+      ],
+      "dc:publisher": "一般社団法人 日本家政学会",
+      "dc:type": "Article",
+      "prism:publicationName": "日本家政学会誌",
+      "prism:issn": "0913-5227",
+      "prism:volume": "46",
+      "prism:number": "4",
+      "prism:startingPage": "347",
+      "prism:endingPage": "354",
+      "prism:publicationDate": "1995",
+      "description": "Our concern is to consider the houses of DEWKS' families. In this report we analyze the influence of the mother's employment condition on the housework sharing, working space and communication space. We surveyed 301 couples and obtained information through a questionnaire. The findings of our survey are as follows : <BR>1) The majority of husbands share in no housework. And wives, who are even full-time workers, are charged with about 90% of the housework.<BR>2) The wives, both full-time and part-time workers, spend about 40% of their waking hours on housework at home.<BR>3) The full-time working wives shorten the time for cleaning and cooking, and spend more time for upbringing than part-time working wives.<BR>4) The housework allotted to husbands is chiefly in the area of child rearing. Though the husbands have the intention of sharing in child rearing, they make little time for it.<BR>5) Nearly half of housework-time is spent in the kitchen, followed by the living room and the dining room.<BR>6) The living rooms are used for personal activities, housework and activities that dislike others' presence, in addition to the original purposes. The living rooms in DEWKS' families are used as a multipurpose room.",
+      "abstractLicenseFlag": "disallow",
+      "dc:identifier": [
+        {
+          "@type": "cir:DOI",
+          "@value": "10.11428/jhej1987.46.347"
+        },
+        {
+          "@type": "cir:NAID",
+          "@value": "130003851303"
+        }
+      ],
+      "dc:subject": [
+        "家事",
+        "共働き家庭",
+        "居間",
+        "常勤",
+        "養育態度",
+        "家族室"
+      ]
+    },
+    {
+      "@id": "https://cir.nii.ac.jp/crid/1390282680535047168",
+      "@type": "item",
+      "title": "若年共働き世帯の家事スタイル",
+      "link": {
+        "@id": "https://cir.nii.ac.jp/crid/1390282680535047168"
+      },
+      "rdfs:seeAlso": {
+        "@id": "https://cir.nii.ac.jp/crid/1390282680535047168.json"
+      },
+      "dc:creator": [
+        "深井 尚子",
+        "多邊田 美香",
+        "弦巻 和"
+      ],
+      "dc:publisher": "一般社団法人 日本家政学会",
+      "dc:type": "Article",
+      "prism:publicationName": "一般社団法人日本家政学会研究発表要旨集",
+      "prism:volume": "56",
+      "prism:number": "0",
+      "prism:startingPage": "93",
+      "prism:endingPage": "93",
+      "prism:publicationDate": "2004",
+      "description": "目的：現在、短大を含めた女性の大学進学率は男性を上回っており、雇用機会均等法の改定など女性を取り巻く環境が整備されつつあることを受けて、女性の就業率は上昇し、サラリーマン世帯における共働き世帯数は専業主婦世帯数を超えるなど、現代女性のライフスタイルの多様化が進んでいる。すでに総務庁「社会生活基本調査」などから妻の就業状況別家事時間について分析が行われている。しかし家事実態を把握する上で、時間の長さだけでは捉えきれない部分があるのではないかと考え、それぞれの時間帯にどのような家事が行われているかを調査し、現代の共働き世帯の家事実態を明らかにした。方法：１）インターネット調査　2003.6　 回答者20-60代男女8276名のうち対象世帯2852世帯を集計　　　２）郵送留め置き式アンケート　2003.7　　首都圏在住核家族327世帯（20・30代共働き109、20・30代専業主婦 131、40・50代専業主婦87）結果：妻がフルタイムで働く共働き世帯では、夜洗濯するなど帰宅後の短時間にいくつもの家事を集中的に行っており、専業主婦の生活時間帯とは大きく異なっていることがわかった。また、自動食器洗浄機などの家電の利用、掃除・育児を中心に夫と家事分担するなど、時間を有効利用している実態が見えてきた。共働き世帯では外部サービスの利用意向も高いことから、今後さらに家電、家族の家事分担、外部サービスを軸に家事のあり方が多様化していくものと予測される。",
+      "abstractLicenseFlag": "disallow",
+      "dc:identifier": [
+        {
+          "@type": "cir:DOI",
+          "@value": "10.11428/kasei.56.0.93.0"
+        },
+        {
+          "@type": "cir:NAID",
+          "@value": "130006956767"
+        }
+      ],
+      "dc:subject": [
+        "共働き",
+        "家事"
+      ]
+    },
+    {
+      "@id": "https://cir.nii.ac.jp/crid/1390001205561216896",
+      "@type": "item",
+      "title": "家事・介護負担からみた世帯類型別生活時間行動のジェンダー分析",
+      "link": {
+        "@id": "https://cir.nii.ac.jp/crid/1390001205561216896"
+      },
+      "rdfs:seeAlso": {
+        "@id": "https://cir.nii.ac.jp/crid/1390001205561216896.json"
+      },
+      "dc:creator": [
+        "大竹 美登利"
+      ],
+      "dc:publisher": "一般社団法人 日本家政学会",
+      "dc:type": "Article",
+      "prism:publicationName": "一般社団法人日本家政学会研究発表要旨集",
+      "prism:volume": "55",
+      "prism:number": "0",
+      "prism:startingPage": "106",
+      "prism:endingPage": "106",
+      "prism:publicationDate": "2003",
+      "description": "<b>目的：</b>伝統的な性役割分業の様相は仕事と家事・介護の時間配分に端的に現れ、また個々人の時間配分は生活の単位である世帯の諸相に影響される。これまで政府統計では世帯単位での生活時間分析が充分できなかったが、この度ミクロデータ活用の機会が与えられたので、政府統計データを世帯単位で分析することを本研究の目的とした。<b>方法：</b>1991年，1996年の社会生活基本調査のリサンプリングデータを使用し、夫と妻の就業状況から世帯を12に分類し、夫婦のみ、夫婦と子、夫婦と子と両親などの世帯類型別に、世帯主、配偶者、子ども、父母など、全ての世帯員の集計を行った。<b>結果及び考察：</b>雇用労働者夫妻の大竹らの調査分析と同様の結果の他、これまで明かでなかった次のことが見いだされた。(1)妻が常勤の世帯で比較すると、夫が自営より雇用者の方が家事・介護時間が長い。(2)妻の就業状況に関わりなく高齢になると妻の家事時間は減少し夫は増加する。(3)6歳未満の子のいない世帯の夫の家事・介護時間は、妻無職の世帯で長く、パートで短いが、妻常勤が必ずしも最長ではなく、子どもの居る世帯とその動向は相違している。(4)子どもの家事・介護時間に性差はあるが、夫雇用妻常勤、夫自営妻常勤の世帯で長く、妻が常勤の世帯の子どもの家事参加が高い。(5)親と同居の世帯では、夫雇用妻無職の世帯の妻の介護・看護時間が非常に長い。(6)夫雇用世帯では親と同居の世帯の妻の家事時間は、核家族世帯より長く、また母親の家事時間も長く、共働きが親に家事の依存をしているとは言えなかった。",
+      "abstractLicenseFlag": "disallow",
+      "dc:identifier": [
+        {
+          "@type": "cir:DOI",
+          "@value": "10.11428/kasei.55.0_106_2"
+        },
+        {
+          "@type": "cir:NAID",
+          "@value": "130005440153"
+        }
+      ],
+      "dc:subject": [
+        "生活時間",
+        "家事",
+        "世帯",
+        "ジェンダー",
+        "ミクロデータ"
+      ]
+    },
+    {
+      "@id": "https://cir.nii.ac.jp/crid/1390282681307064320",
+      "@type": "item",
+      "title": "就労形態からみた共働き主婦の研究",
+      "link": {
+        "@id": "https://cir.nii.ac.jp/crid/1390282681307064320"
+      },
+      "rdfs:seeAlso": {
+        "@id": "https://cir.nii.ac.jp/crid/1390282681307064320.json"
+      },
+      "dc:creator": [
+        "横山 シヅ"
+      ],
+      "dc:publisher": "一般社団法人 日本家政学会",
+      "dc:type": "Article",
+      "prism:publicationName": "家政学雑誌",
+      "prism:issn": "0449-9069",
+      "prism:volume": "22",
+      "prism:number": "6",
+      "prism:startingPage": "394",
+      "prism:endingPage": "401",
+      "prism:publicationDate": "1971",
+      "description": "We tried to learn the actual lives of wives working on part-time basis, their reasons for being employed, and the influence on their housekeeping, and to make some remarks about the facts obtained.<BR>The author selected fifty working wives out of the employees of two department-stores and another 50 out of a factory in Sendai area to administer a questionnaire in the middle of April, 1969.<BR>Our analysis shows that : <BR>1. The purpose of working wives as department-store sales-assistants is mainly to make use of their spare time, and factory-workers to supplement their domestic economy.<BR>2. Extra-income earned is used to improve their household, to pay their debts, to increase their savings, and so on.<BR>3. Everyday housekeeping is also managed and performed by them, similarly to non-working wives. Being employed on part-time basis, however, they are discontented with much less free time for domestic tasks and others.<BR>4. Their households can scarcely be well kept, if working hours per day is less than five hours. If working wives are going to manage sufficiently both their household and outside job, they have to simplify housechores and work very efficiently.",
+      "abstractLicenseFlag": "disallow",
+      "dc:identifier": [
+        {
+          "@type": "cir:DOI",
+          "@value": "10.11428/jhej1951.22.394"
+        },
+        {
+          "@type": "cir:NAID",
+          "@value": "130003868345"
+        }
+      ]
+    },
+    {
+      "@id": "https://cir.nii.ac.jp/crid/1390282681307670528",
+      "@type": "item",
+      "title": "農家の健康・家政管理に関する調査研究 (第3報)",
+      "link": {
+        "@id": "https://cir.nii.ac.jp/crid/1390282681307670528"
+      },
+      "rdfs:seeAlso": {
+        "@id": "https://cir.nii.ac.jp/crid/1390282681307670528.json"
+      },
+      "dc:creator": [
+        "山口 久子",
+        "武藤 富美子",
+        "石垣 志津子",
+        "森川 きく"
+      ],
+      "dc:publisher": "一般社団法人 日本家政学会",
+      "dc:type": "Article",
+      "prism:publicationName": "家政学雑誌",
+      "prism:issn": "04499069",
+      "prism:volume": "25",
+      "prism:number": "1",
+      "prism:startingPage": "79",
+      "prism:endingPage": "84",
+      "prism:publicationDate": "1974",
+      "description": "In order to aim at betterment of health and home economic management of overworking farm workers, we regard it necessary for them to obtain proper guidance in their leisure life, particularly in terms of its necessity, its position, its distribution, its utilization, etc. Accordingly, we made the present report as a clue to their guidance after the investigation and analysis of their leisure life.<BR>With particular locations of farmhouses the subject of investigation, we had questionnaires and hour-by-hour time schedules filled in individually.<BR>The results obtained are as follows : <BR>1. Farm workers' leisure hours fall far below the average and are mostly occupied with hours of rest; therefore, their skill in and sense of how to enjoy their leisure time is poor.<BR>2. Interrelation between their working hours and leisure hours is high, and the working hours prove to be an important factor in deciding their leisure hours.<BR>3. The women's spare hours created by the spread of modern living goods are allotted to further production, causing a vicious circle of overintensification of their working hours.",
+      "abstractLicenseFlag": "disallow",
+      "dc:identifier": [
+        {
+          "@type": "cir:DOI",
+          "@value": "10.11428/jhej1951.25.79"
+        },
+        {
+          "@type": "cir:NDL_BIB_ID",
+          "@value": "433024"
+        },
+        {
+          "@type": "cir:URI",
+          "@value": "http://id.ndl.go.jp/bib/433024"
+        },
+        {
+          "@type": "cir:URI",
+          "@value": "https://ndlsearch.ndl.go.jp/books/R000000004-I433024"
+        },
+        {
+          "@type": "cir:NAID",
+          "@value": "130003716648"
+        },
+        {
+          "@type": "cir:URI",
+          "@value": "https://search.jamas.or.jp/link/ui/1975043823"
+        }
+      ],
+      "dc:source": [
+        {
+          "@id": "http://id.ndl.go.jp/bib/433024"
+        },
+        {
+          "@id": "https://ndlsearch.ndl.go.jp/books/R000000004-I433024"
+        },
+        {
+          "@id": "https://search.jamas.or.jp/link/ui/1975043823"
+        }
+      ]
+    },
+    {
+      "@id": "https://cir.nii.ac.jp/crid/1050290384133886848",
+      "@type": "item",
+      "title": "子育て世代における生活様式の長期トレンドの変容 : 地域効果を考慮したマルチレベルモデルを用いて",
+      "link": {
+        "@id": "https://cir.nii.ac.jp/crid/1050290384133886848"
+      },
+      "rdfs:seeAlso": {
+        "@id": "https://cir.nii.ac.jp/crid/1050290384133886848.json"
+      },
+      "dc:creator": [
+        "栗原, 由紀子"
+      ],
+      "dc:publisher": "経済研究所",
+      "dc:type": "Article",
+      "prism:publicationName": "経済研究所年報",
+      "prism:issn": "0285-9718",
+      "prism:number": "53",
+      "prism:startingPage": "259",
+      "prism:endingPage": "287",
+      "prism:publicationDate": "2021-10-05",
+      "description": "本研究では，子どものいる共働き世帯の夫婦を対象として，社会生活基本調査の調査票情報をもとに，30年間におよぶ生活時間の全国的な推移ならびに地域的な変化の傾向を明らかにした。まず，全国レベルでは，1986年と比較して夫婦ともに家事や通勤・仕事などの2 次活動が増加し，代わりに休養関連時間や積極的余暇行動などの3 次活動が減少する傾向が捉えられた。都道府県レベルでは，妻の家事時間や育児行動において多数の地域で時系列的な変化が観測されたが，夫に関する時系列的な変化は約半数の地域に留まっていた。次に，マルチレベルモデルにより地域効果を踏まえて家事，育児，休養関連時間などの各種生活時間の規定要因を計測した結果，とくに夫婦の学歴が経年的に規定要因として捕捉されており，長期的視点においても教育水準の向上は有償労働における労働生産性の向上のみならず，無償労働のあり方，および日常生活における余暇活動の充実に直接的または間接的に影響をもたらしている可能性が示唆された。",
+      "dc:identifier": [
+        {
+          "@type": "cir:URI",
+          "@value": "https://chuo-u.repo.nii.ac.jp/records/13595"
+        },
+        {
+          "@type": "cir:NDL_BIB_ID",
+          "@value": "031825895"
+        },
+        {
+          "@type": "cir:URI",
+          "@value": "http://id.ndl.go.jp/bib/031825895"
+        },
+        {
+          "@type": "cir:URI",
+          "@value": "https://ndlsearch.ndl.go.jp/books/R000000004-I031825895"
+        },
+        {
+          "@type": "cir:NAID",
+          "@value": "120007174764"
+        }
+      ],
+      "dc:subject": [
+        "マルチレベルモデル",
+        "地域効果",
+        "家事・育児時間",
+        "余暇活動",
+        "社会生活基本調査",
+        "調査票情報",
+        "JEL codes: J"
+      ],
+      "dc:source": [
+        {
+          "@id": "https://chuo-u.repo.nii.ac.jp/records/13595"
+        },
+        {
+          "@id": "http://id.ndl.go.jp/bib/031825895"
+        },
+        {
+          "@id": "https://ndlsearch.ndl.go.jp/books/R000000004-I031825895"
+        },
+        {
+          "@id": "http://id.nii.ac.jp/1648/00013580/"
+        }
+      ]
+    },
+    {
+      "@id": "https://cir.nii.ac.jp/crid/1390564227305766528",
+      "@type": "item",
+      "title": "福祉サービスの地理学的研究におけるジェンダーの視点",
+      "link": {
+        "@id": "https://cir.nii.ac.jp/crid/1390564227305766528"
+      },
+      "rdfs:seeAlso": {
+        "@id": "https://cir.nii.ac.jp/crid/1390564227305766528.json"
+      },
+      "dc:creator": [
+        "久木元 美琴"
+      ],
+      "dc:publisher": "公益社団法人 日本地理学会",
+      "dc:type": "Article",
+      "prism:publicationName": "日本地理学会発表要旨集",
+      "prism:volume": "2019a",
+      "prism:number": "0",
+      "prism:startingPage": "87",
+      "prism:publicationDate": "2019",
+      "description": "<p>１　はじめに</p><p></p><p>報告者はこれまで，都市の時空間的制約，女性の働き方の変化とその地域差，家族構造，地域産業と政策の変遷に着目しながら，保育をめぐる地域固有の問題を検討してきた．本報告では，国内における保育サービスの地理学的研究の知見をジェンダーの視点から再整理し，今後の研究課題を導出することを目的とする．特に，新自由主義的福祉政策の展開が日本の保育需給にもたらす影響に注目しながら検討してみたい．</p><p></p><p>２　ジェンダー化された都市空間構造と保育サービス需給</p><p></p><p>ジェンダー化された都市空間構造の指摘は，大都市圏において保育需給がミスマッチを引き起こしやすい要因を指摘する上で基盤となる視点である．女性は家庭内ケアワーク（家事・育児・介護）の責任者として自宅周辺を行動範囲としており，長時間通勤を含め自宅と離れた職場周辺での時間を多く過ごす男性とは対照的な活動パスを描く．従来の公的空間で「男並み」に働くためには，女性は家庭内の仕事を省力化するか社会化せざるをえない．1990年代以降に蓄積された時間地理学的手法による一連の研究群は，保育所に子どもを預ける母親が家庭内と家庭外での仕事の両立責任と時空間的制約を抱えた生活者であること，その制約に着目することで適切かつ実効性あるサービス供給が可能になることを知らしめた．時間地理学的研究の成果のなかでも，都市空間構造とそこでの働き方にあわせた，多様で柔軟なサービスと利便性の高い施設配置の必要性の指摘は地理学的知見からの提言として説得力を有してきたとともに，1990年代後半以降に進められてきた新自由主義的な福祉政策と保育の規制緩和の動向とも連動的であった．</p><p></p><p>他方，「公（生産）‐都心‐男性」中心主義的な労働や都市空間構造を異化する事例にも地理学は着目してきた．たとえば，都心の企業内保育所を利用する親の語りからは，子連れ通勤の精神的負担や「安心感」といったケアサービス利用における感情的側面に重視することの必要性がみてとれるほか，郊外保育NPOを立ち上げた当事者の実践からは，働くためにケア対象（子ども）との距離を受け入れざるをえない「生産の論理」への疑義や，ケアラーと利用者の互酬的な関係性にもとづくコミュニティや新しいケア供給の在り方の模索を垣間みることができる．</p><p></p><p>３　新自由主義的福祉政策とケアワーク</p><p></p><p>2000年代以降，規制緩和による保育供給の多様化と都市再開発による居住地構造の変化は，慢性化した認可保育所不足と相まって，自己責任による選択（居住地・保育サービス）を通じた「保活」現象を引き起こした．共働きを前提とする子育て世帯では保育所送迎や情報収集の点で夫が重要な役割を果たすケースが増加している一方，家事時間や育休取得率等の男女差が示すように共働き世帯内での分担は平等的ではない．</p><p></p><p>また，経済のグローバル化と新自由主義的福祉政策は，ケア労働の周縁化や断片化を促進している．保育や介護などのケア労働は近代以降．主に女性のアンペイドワークによって担われてきた背景から低賃金になりやすい．保育は女性労働力への選好が強いこともあって介護とくらべ男性比率が低く，典型的な女性職となっている．欧米先進国の世界都市における「グローバル・ケア・チェーン」は，女性間格差と地域間格差とが連動して生じるケア構造の象徴的帰結といえる．</p><p></p><p>日本では，認可保育所を中心とした供給体制のもと保育における外国人労働力の参入が抑制的であることから，海外とは異なる状況を示してきた．しかし，公務員数削減と非正規化にともなって保育士の労働環境は不安定化しており，多職種と比較した保育士の相対賃金は低下している．特に地方圏では医療・福祉での雇用機会が重要な役割を果たしてきたが，従来地元のケアを担ってきた若年女性が大都市の労働力需要に惹きつけられ流出しつつあるという実態調査もあり，大都市のケア需要を地方出身や非正規雇用の女性が（介護においては非正規雇用の男性も）担うケア労働力の地理が生じている可能性がある．</p><p></p><p>４　保育サービスの地理学から保育とケアの地理学に向けて</p><p>保育サービス需給の地理学的研究は，地域に埋め込まれたジェンダー規範や空間構造と女性労働や家族をめぐる地域的文脈を直接的・間接的に示してきた．他方，新自由主義的福祉政策と非正規化によってケアサービスの雇用労働力は周縁化されており，女性間や世帯間での格差をともないながら，男女二元論では説明しきれない側面が生じてきている．新自由主義の進展にともなって，ケアはサービスとして市場化される一方で，市場化しきれない部分は私的privateな領域へ追いやられる．今後，保育・子育て支援の地理学には，サービスの市場化・社会化とともに発生するフォーマルなケア労働の実態や，私事化されたインフォーマルなケアワークの担い手への配慮が必要になるだろう．</p>",
+      "abstractLicenseFlag": "disallow",
+      "dc:identifier": [
+        {
+          "@type": "cir:DOI",
+          "@value": "10.14866/ajg.2019a.0_87"
+        },
+        {
+          "@type": "cir:NAID",
+          "@value": "130007711022"
+        }
+      ],
+      "dc:subject": [
+        "福祉サービス",
+        "保育",
+        "ケアワーク",
+        "新自由主義",
+        "ジェンダー"
+      ]
+    }
+  ]
+}

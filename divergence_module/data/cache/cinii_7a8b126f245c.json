@@ -1,0 +1,451 @@
+{
+  "@context": {
+    "@vocab": "http://purl.org/rss/1.0/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "dc": "http://purl.org/dc/elements/1.1/",
+    "prism": "http://prismstandard.org/namespaces/basic/2.0/",
+    "ndl": "http://ndl.go.jp/dcndl/terms",
+    "opensearch": "http://a9.com/-/spec/opensearch/1.1/",
+    "cir": "https://cir.nii.ac.jp/schema/1.0/",
+    "@language": "ja"
+  },
+  "@id": "https://cir.nii.ac.jp/opensearch/articles?q=%E8%82%B2%E5%85%90%20%E5%AE%B6%E4%BA%8B%E8%B2%A0%E6%8B%85&count=10&start=1&sortorder=4&lang=ja&format=json",
+  "@type": "channel",
+  "title": "CiNii Research articles - 育児 家事負担 10 1 4 ja json",
+  "description": "CiNii Research articles - 育児 家事負担 10 1 4 ja json",
+  "link": {
+    "@id": "https://cir.nii.ac.jp/opensearch/articles?q=%E8%82%B2%E5%85%90%20%E5%AE%B6%E4%BA%8B%E8%B2%A0%E6%8B%85&count=10&start=1&sortorder=4&lang=ja&format=json"
+  },
+  "dc:date": "2026-06-16T13:42:52.604+09:00",
+  "opensearch:totalResults": 9,
+  "opensearch:startIndex": 1,
+  "opensearch:itemsPerPage": 9,
+  "items": [
+    {
+      "@id": "https://cir.nii.ac.jp/crid/1570572702604276096",
+      "@type": "item",
+      "title": "300 家事・育児の両立が母親の生活全般に及ぼす影響(第1報) : 家事負担感と育児の状況について(育児6 実態調査,第49回日本母性衛生学会総会)",
+      "link": {
+        "@id": "https://cir.nii.ac.jp/crid/1570572702604276096"
+      },
+      "rdfs:seeAlso": {
+        "@id": "https://cir.nii.ac.jp/crid/1570572702604276096.json"
+      },
+      "dc:creator": [
+        "及川 裕子",
+        "今井 充子"
+      ],
+      "dc:publisher": "日本母性衛生学会",
+      "dc:type": "Article",
+      "prism:publicationName": "母性衛生",
+      "prism:issn": "03881512",
+      "prism:volume": "49",
+      "prism:number": "3",
+      "prism:startingPage": "232",
+      "prism:publicationDate": "2008-10",
+      "dc:identifier": [
+        {
+          "@type": "cir:NAID",
+          "@value": "110007047911"
+        },
+        {
+          "@type": "cir:URI",
+          "@value": "https://search.jamas.or.jp/link/ui/2009035731"
+        }
+      ],
+      "dc:source": [
+        {
+          "@id": "https://search.jamas.or.jp/link/ui/2009035731"
+        }
+      ]
+    },
+    {
+      "@id": "https://cir.nii.ac.jp/crid/1520853833592877568",
+      "@type": "item",
+      "title": "育児のイライラ感と就労、近親の支援者の関連 : 横浜市青葉区のアンケート調査結果より",
+      "link": {
+        "@id": "https://cir.nii.ac.jp/crid/1520853833592877568"
+      },
+      "rdfs:seeAlso": {
+        "@id": "https://cir.nii.ac.jp/crid/1520853833592877568.json"
+      },
+      "dc:creator": [
+        "長谷川 かおり"
+      ],
+      "dc:publisher": "横浜 : 東洋英和女学院大学",
+      "dc:type": "Article",
+      "prism:publicationName": "人文・社会科学論集 = Toyo Eiwa journal of the humanities and social sciences",
+      "prism:issn": "09157794",
+      "prism:number": "29",
+      "prism:startingPage": "23",
+      "prism:endingPage": "38",
+      "prism:publicationDate": "2011",
+      "dc:identifier": [
+        {
+          "@type": "cir:NDL_BIB_ID",
+          "@value": "023688120"
+        },
+        {
+          "@type": "cir:URI",
+          "@value": "http://id.ndl.go.jp/bib/023688120"
+        },
+        {
+          "@type": "cir:URI",
+          "@value": "https://ndlsearch.ndl.go.jp/books/R000000004-I023688120"
+        },
+        {
+          "@type": "cir:NAID",
+          "@value": "40019295839"
+        }
+      ],
+      "dc:subject": [
+        "子育て支援政策",
+        "子育てストレス",
+        "家族政策",
+        "女性の就労",
+        "家事負担感",
+        "child-rearing support",
+        "child care",
+        "family policy",
+        "working women",
+        "parenting stress"
+      ],
+      "dc:source": [
+        {
+          "@id": "http://id.ndl.go.jp/bib/023688120"
+        },
+        {
+          "@id": "https://ndlsearch.ndl.go.jp/books/R000000004-I023688120"
+        },
+        {
+          "@id": "http://id.nii.ac.jp/1093/00000369/"
+        }
+      ]
+    },
+    {
+      "@id": "https://cir.nii.ac.jp/crid/1390565159980542720",
+      "@type": "item",
+      "title": "研究 母親の育児･家事負担と父親の育児･家事参加状況-乳児をもつ父母へのアンケート調査から",
+      "link": {
+        "@id": "https://cir.nii.ac.jp/crid/1390565159980542720"
+      },
+      "rdfs:seeAlso": {
+        "@id": "https://cir.nii.ac.jp/crid/1390565159980542720.json"
+      },
+      "dc:creator": [
+        "加藤 英世",
+        "塚本 晴美",
+        "佐々木 逸子",
+        "三堀 玉恵",
+        "小島 裕子",
+        "大枝 弘",
+        "野山 修",
+        "小林 清"
+      ],
+      "dc:publisher": "株式会社医学書院",
+      "dc:type": "Article",
+      "prism:publicationName": "保健婦雑誌",
+      "prism:issn": "0047-1844",
+      "prism:volume": "46",
+      "prism:number": "4",
+      "prism:startingPage": "313",
+      "prism:endingPage": "319",
+      "prism:publicationDate": "1990-04-10",
+      "dc:identifier": [
+        {
+          "@type": "cir:DOI",
+          "@value": "10.11477/mf.1662900052"
+        }
+      ]
+    },
+    {
+      "@id": "https://cir.nii.ac.jp/crid/1521417756182725376",
+      "@type": "item",
+      "title": "本誌特別調査 個人 働く女性の本音に迫る 既婚女性社員300人に聞いた 家事・育児・仕事に関するアンケート : 女性が働き続けるために家庭内での家事負担の軽減を求める声が多い。夫が家事分担するほど妻の昇進意欲は高くなる",
+      "link": {
+        "@id": "https://cir.nii.ac.jp/crid/1521417756182725376"
+      },
+      "rdfs:seeAlso": {
+        "@id": "https://cir.nii.ac.jp/crid/1521417756182725376.json"
+      },
+      "dc:publisher": "東京 : 労務行政",
+      "dc:type": "Article",
+      "prism:publicationName": "労政時報 / 労務行政研究所 編",
+      "prism:issn": "13425250",
+      "prism:number": "3914",
+      "prism:startingPage": "86",
+      "prism:endingPage": "103",
+      "prism:publicationDate": "2016-08",
+      "dc:identifier": [
+        {
+          "@type": "cir:NDL_BIB_ID",
+          "@value": "027522708"
+        },
+        {
+          "@type": "cir:URI",
+          "@value": "http://id.ndl.go.jp/bib/027522708"
+        },
+        {
+          "@type": "cir:URI",
+          "@value": "https://ndlsearch.ndl.go.jp/books/R000000004-I027522708"
+        },
+        {
+          "@type": "cir:NAID",
+          "@value": "40020899388"
+        }
+      ],
+      "dc:source": [
+        {
+          "@id": "http://id.ndl.go.jp/bib/027522708"
+        },
+        {
+          "@id": "https://ndlsearch.ndl.go.jp/books/R000000004-I027522708"
+        }
+      ]
+    },
+    {
+      "@id": "https://cir.nii.ac.jp/crid/1050292572146942464",
+      "@type": "item",
+      "title": "育児ケア成果データの見える化による男女共同参画の気づき意識の支援に向けた検討",
+      "link": {
+        "@id": "https://cir.nii.ac.jp/crid/1050292572146942464"
+      },
+      "rdfs:seeAlso": {
+        "@id": "https://cir.nii.ac.jp/crid/1050292572146942464.json"
+      },
+      "dc:creator": [
+        "西川, 奏",
+        "山根, 麻美",
+        "若狭, 節子",
+        "上川原, ひろみ",
+        "山内, 寿代",
+        "皆月, 昭則"
+      ],
+      "dc:publisher": "情報処理学会",
+      "dc:type": "Article",
+      "prism:publicationName": "第79回全国大会講演論文集",
+      "prism:volume": "2017",
+      "prism:number": "1",
+      "prism:startingPage": "359",
+      "prism:endingPage": "360",
+      "prism:publicationDate": "2017-03-16",
+      "description": "政府が主導する男女共同参画社会をめざす背景には，座視できない大きな社会問題があることが明らかになっている．近年の調査によると，乳幼児世帯での1日あたりの育児時間が父親で約40分，母親で約180分という報告がある．母親の育児時間に家事時間を加算すると，女性の育児・家事負担は過大になっている．男性は朝に出勤し，夕方に帰宅する生活パターンが多く，昼間の女性の育児・家事成果は見えにくく，気づき意識を得ることは困難である．本研究では，1歳未満児の育児ケア（授乳とおむつ交換の回数）データをスマートフォンアプリケーションで入力しクラウドで管理することで，外出時の男性や親族と共有する機能を実装し検証した．",
+      "dc:identifier": [
+        {
+          "@type": "cir:URI",
+          "@value": "https://ipsj.ixsq.nii.ac.jp/records/181582"
+        },
+        {
+          "@type": "cir:NAID",
+          "@value": "170000175321"
+        }
+      ],
+      "dc:subject": [
+        "インタフェース"
+      ],
+      "dc:source": [
+        {
+          "@id": "https://ipsj.ixsq.nii.ac.jp/records/181582"
+        },
+        {
+          "@id": "http://id.nii.ac.jp/1001/00181494/"
+        }
+      ]
+    },
+    {
+      "@id": "https://cir.nii.ac.jp/crid/1050282812808848768",
+      "@type": "item",
+      "title": "平等な子育てに向かって : \"夫婦で育児\"の四累計 (<テーマ>変わりゆく「家族」と次代再生産)",
+      "link": {
+        "@id": "https://cir.nii.ac.jp/crid/1050282812808848768"
+      },
+      "rdfs:seeAlso": {
+        "@id": "https://cir.nii.ac.jp/crid/1050282812808848768.json"
+      },
+      "dc:creator": [
+        "船橋, 恵子"
+      ],
+      "dc:publisher": "国立女性教育会館",
+      "dc:type": "Article",
+      "prism:publicationName": "国立女性教育会館研究紀要",
+      "prism:volume": "8",
+      "prism:startingPage": "13",
+      "prism:endingPage": "23",
+      "prism:publicationDate": "2004-08-01",
+      "description": "父親の育児参加はどこまで家族におけるジェンダー秩序を変革しうるだろうか。10歳以下の子どもを一人以上持ち、父親がよく育児に関わっている17組のカップルに対して、インタビュー調査を実施した。その結果、職業と家族ケアの性役割配分の視点から、基本的四類型を抽出した。Aタイプ(新保守主義的家族)は、母親が主なケア役割を担っており、父親は時々助けている。Bタイプ(移行期家族)は、両親とも職業を持ち、家事も分担しているが、母親の家事負担が父親よりも重い。Cタイプ(平等主義家族)は、両親ともに職業と家事をほぼ平等に担っている。Dタイプ(ラディカルな家族)は、性役割が逆転しており、女性が稼ぎ手で男性がケアラーである。A～Dタイプまでの語りを分析した結果、ジェンダー秩序は、あらゆるところで作動しており、幸福な家庭、社会的成功、よりよい生活といった様々な男性の願望を優先するように働いている。反対に、女性はパートナーの男性に従って自分自身の願望を調整するように期待されている。しかしながら、女性がパートナーの男性と交渉することは重要で、カップル間の新しい均衡をもたらしうる。それを「ジェンダー契約」と呼ぶことができる。",
+      "dc:identifier": [
+        {
+          "@type": "cir:URI",
+          "@value": "https://nwec.repo.nii.ac.jp/records/16854"
+        },
+        {
+          "@type": "cir:NAID",
+          "@value": "120005404840"
+        }
+      ],
+      "dc:subject": [
+        "ジェンダー秩序",
+        "ジェンダー契約",
+        "父親",
+        "母親",
+        "育児",
+        "家族"
+      ],
+      "dc:source": [
+        {
+          "@id": "https://nwec.repo.nii.ac.jp/records/16854"
+        },
+        {
+          "@id": "http://id.nii.ac.jp/1243/00016853/"
+        }
+      ]
+    },
+    {
+      "@id": "https://cir.nii.ac.jp/crid/1390282680587629568",
+      "@type": "item",
+      "title": "インターネットにおける出産と子育てに関する情報収集・交換の現状について",
+      "link": {
+        "@id": "https://cir.nii.ac.jp/crid/1390282680587629568"
+      },
+      "rdfs:seeAlso": {
+        "@id": "https://cir.nii.ac.jp/crid/1390282680587629568.json"
+      },
+      "dc:creator": [
+        "吉住 優子",
+        "辻川 ひとみ"
+      ],
+      "dc:publisher": "一般社団法人 日本デザイン学会",
+      "dc:type": "Article",
+      "prism:publicationName": "日本デザイン学会研究発表大会概要集",
+      "prism:volume": "54",
+      "prism:number": "0",
+      "prism:startingPage": "H04",
+      "prism:endingPage": "H04",
+      "prism:publicationDate": "2007",
+      "description": "本研究ではインターネットによって得ることのできる子育てに関する情報内容と量により、職業を持ちながら結婚、さらに出産を選択する、もしくは選択を希望している女性たちによる、情報収集と情報交換内容の調査を行った。今日の日本ではインターネットの普及が進み情報化社会といわれており、情報豊富かつ選択自由な状況下において、女性たちがどのような情報を参考とし自らのライフプランを選択しているのかを把握することが目的である。調査方法は、Google、Yahooにおける「ワーキングマザー」検索にてヒットした各上位10サイトと先行研究よりキーワードを110個抽出し、Google上位100サイトによるキーワード検索数を計った。結果として、キーワード検索数の上位の内容は、育児に関する出来事の情報交換とそれに伴う子どもの成長確認、妊娠中の体の変化や留意点の情報提供、地域毎による保育園の利便性に関する情報収集であった。またそれに続き、社会制度や身内・地域によるサポートや家事負担の軽減方法についての情報交換が数多く見受けられ、働き方についての不安感や自分の時間を大切にしたいといった意識の現れも窺うことができた。",
+      "abstractLicenseFlag": "disallow",
+      "dc:identifier": [
+        {
+          "@type": "cir:DOI",
+          "@value": "10.11247/jssd.54.0.h04.0"
+        },
+        {
+          "@type": "cir:NAID",
+          "@value": "130004637581"
+        }
+      ],
+      "dc:subject": [
+        "childcare",
+        "double-income couples",
+        "internet"
+      ]
+    },
+    {
+      "@id": "https://cir.nii.ac.jp/crid/1390001204435885312",
+      "@type": "item",
+      "title": "産後3・4か月の母親の母親役割獲得と妊娠中における産後の身体的変化へのイメージや産後の生活・育児に対する夫婦間調整との関連性",
+      "link": {
+        "@id": "https://cir.nii.ac.jp/crid/1390001204435885312"
+      },
+      "rdfs:seeAlso": {
+        "@id": "https://cir.nii.ac.jp/crid/1390001204435885312.json"
+      },
+      "dc:creator": [
+        "中垣 明美",
+        "千葉 朝子"
+      ],
+      "dc:publisher": "一般社団法人 日本助産学会",
+      "dc:type": "Article",
+      "prism:publicationName": "日本助産学会誌",
+      "prism:issn": "0917-6357",
+      "prism:volume": "26",
+      "prism:number": "2",
+      "prism:startingPage": "211",
+      "prism:endingPage": "221",
+      "prism:publicationDate": "2012",
+      "description": "<B>目　的</B><br>　産後3～4か月の母親の母親役割獲得の状況と妊娠中にイメージした産後の身体的変化と実際のギャップや，産後の生活や育児に関する妊娠中の夫婦間の調整の有無およびその他の要因との関連を検討し，母親役割獲得に必要な妊娠中の支援策を探索することである。<br><b>方　法</b><br>　母親役割の獲得が進み，産後の不安が減少するとされる産後3～4か月の母親を対象とした。2市6施設の3・4か月乳児健診に参加した母親348名に無記名自記式質問紙を配布した。調査内容は，基本属性と「母親役割の受容に関する意識尺度（大日向，1996）」を用いた母親役割の獲得状況，産後の身体的イメージと実際，妊娠中の夫婦間における産後の生活や育児の調整の有無，出産満足度などとした。郵送により回収した113名（回収率32.5％）の回答から不備のあるものを除き107名を対象とした。<br><b>結　果</b><br>　対象者の平均年齢は32.0歳（SD4.0），初産婦は77名（72.0％），経産婦は30名（28.0％）であった。初産婦では産後の「傷の痛み」「乳房の痛み」はイメージしにくく，実際も「イメージより辛い」が多かった。「後陣痛」がイメージより辛いことと母親役割の否定的受容（p=.049）,「脱肛」がイメージより軽いことと肯定的受容（p=.016）に有意な関連があった。育児の調整と「肯定的受容では，「児の世話」（p=.035），「児の相手」（p=.036），「児のお風呂」（p=.010）が有意に高かった。家事の調整と否定的受容では「買い物」の調整ありが有意に高かった（p=.026）。母親役割肯定的受容と「出産満足度」，否定的受容と「家事負担」,「育児負担」にはそれぞれ正の相関があった。<br><b>結　論</b><br>　妊娠中における産後の身体的変化のイメージと実際とのギャップ，特にイメージより辛いことと母親役割受容には関連があった。また妊娠中の育児に関する夫婦間調整と母親役割受容には有意な関連があった。このことから身体的イメージのギャップを埋める生活や育児についての調整を促進するなど，妊娠期からの支援策の必要性が示唆された。",
+      "abstractLicenseFlag": "disallow",
+      "dc:identifier": [
+        {
+          "@type": "cir:DOI",
+          "@value": "10.3418/jjam.26.211"
+        },
+        {
+          "@type": "cir:NAID",
+          "@value": "130004505925"
+        }
+      ],
+      "dc:subject": [
+        "母親役割",
+        "出産準備教育",
+        "3・4か月健診",
+        "出産満足度",
+        "妊婦支援"
+      ]
+    },
+    {
+      "@id": "https://cir.nii.ac.jp/crid/1391412881268452480",
+      "@type": "item",
+      "title": "外科系医師のワーク・ライフバランスの現状と医学教育・研修における可能性について",
+      "link": {
+        "@id": "https://cir.nii.ac.jp/crid/1391412881268452480"
+      },
+      "rdfs:seeAlso": {
+        "@id": "https://cir.nii.ac.jp/crid/1391412881268452480.json"
+      },
+      "dc:creator": [
+        "海原 純子",
+        "錦谷 まりこ",
+        "早坂 明哲",
+        "藤倉 輝道",
+        "前田 美穂",
+        "塚田（哲翁） 弥生"
+      ],
+      "dc:publisher": "日本鼻科学会",
+      "dc:type": "Article",
+      "prism:publicationName": "日本鼻科学会会誌",
+      "prism:issn": "0910-9153",
+      "prism:volume": "59",
+      "prism:number": "4",
+      "prism:startingPage": "325",
+      "prism:endingPage": "334",
+      "prism:publicationDate": "2020",
+      "description": "<p>外科系医師を中心に継続的な就労の要因としてのワーク・ライフバランスを理解し，必要な支援を考えることが本研究の目的である。大学の同窓会や地域の医師会に呼びかけ，現役の医師に対してワーク・ライフバランスとともに，職業環境，家事負担，生活や仕事への満足度，健康状態等に関する調査を行った。また，医学教育による意識の変化を測るため，医学生に対し2年時と卒業前の6年時におけるワーク・ライフバランスの価値について質問した。女性医師は男性医師に比し家事育児による負担感からワーク・ライフコンフリクトの生じる可能性が示された。特に外科系医師は，そうでない医師に比べて時間的な問題で仕事由来のコンフリクトが大きいことが示唆された。医学生のワーク・ライフバランスの重要性に関する意見は，女子医学生のほうが重要と考えるものが多かったが，卒前の6年時の調査結果で男女間の差は小さくなった。家事育児の性別役割分担への考えは，生育家庭から影響を受けることが示唆され，労働時間など職場環境の改善のほか，大学の医学教育の充実も，医師などの専門職の就労継続に効果のある可能性が示唆された。</p>",
+      "abstractLicenseFlag": "disallow",
+      "dc:identifier": [
+        {
+          "@type": "cir:DOI",
+          "@value": "10.7248/jjrhi.59.325"
+        },
+        {
+          "@type": "cir:URI",
+          "@value": "https://www.jstage.jst.go.jp/article/jjrhi/59/4/59_325/_pdf"
+        },
+        {
+          "@type": "cir:NAID",
+          "@value": "130007959106"
+        },
+        {
+          "@type": "cir:URI",
+          "@value": "https://search.jamas.or.jp/link/ui/2021171309"
+        }
+      ],
+      "dc:subject": [
+        "ワーク・ライフバランス",
+        "外科系医師",
+        "労働時間",
+        "医学教育",
+        "男女比較"
+      ],
+      "dc:source": [
+        {
+          "@id": "https://www.jstage.jst.go.jp/article/jjrhi/59/4/59_325/_pdf"
+        },
+        {
+          "@id": "https://search.jamas.or.jp/link/ui/2021171309"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,507 @@
+{
+  "@context": {
+    "@vocab": "http://purl.org/rss/1.0/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "dc": "http://purl.org/dc/elements/1.1/",
+    "prism": "http://prismstandard.org/namespaces/basic/2.0/",
+    "ndl": "http://ndl.go.jp/dcndl/terms",
+    "opensearch": "http://a9.com/-/spec/opensearch/1.1/",
+    "cir": "https://cir.nii.ac.jp/schema/1.0/",
+    "@language": "ja"
+  },
+  "@id": "https://cir.nii.ac.jp/opensearch/articles?q=%E8%82%B2%E5%85%90%20%E5%AE%B6%E4%BA%8B%E6%99%82%E9%96%93&count=10&start=1&sortorder=4&lang=ja&format=json",
+  "@type": "channel",
+  "title": "CiNii Research articles - 育児 家事時間 10 1 4 ja json",
+  "description": "CiNii Research articles - 育児 家事時間 10 1 4 ja json",
+  "link": {
+    "@id": "https://cir.nii.ac.jp/opensearch/articles?q=%E8%82%B2%E5%85%90%20%E5%AE%B6%E4%BA%8B%E6%99%82%E9%96%93&count=10&start=1&sortorder=4&lang=ja&format=json"
+  },
+  "dc:date": "2026-06-10T15:34:52.134+09:00",
+  "opensearch:totalResults": 22,
+  "opensearch:startIndex": 1,
+  "opensearch:itemsPerPage": 10,
+  "items": [
+    {
+      "@id": "https://cir.nii.ac.jp/crid/1522262180875737856",
+      "@type": "item",
+      "title": "01年社会生活基本調査 総務省統計局 妻にかたよる育児と家事時間--男性の35%が10時間以上の仕事、夫の0歳児の育児時間は39分",
+      "link": {
+        "@id": "https://cir.nii.ac.jp/crid/1522262180875737856"
+      },
+      "rdfs:seeAlso": {
+        "@id": "https://cir.nii.ac.jp/crid/1522262180875737856.json"
+      },
+      "dc:publisher": "東京 : 労働法令協会",
+      "dc:type": "Article",
+      "prism:publicationName": "賃金・労務通信",
+      "prism:volume": "55",
+      "prism:number": "28",
+      "prism:startingPage": "20",
+      "prism:endingPage": "24",
+      "prism:publicationDate": "2002-10-25",
+      "dc:identifier": [
+        {
+          "@type": "cir:NDL_BIB_ID",
+          "@value": "6319140"
+        },
+        {
+          "@type": "cir:URI",
+          "@value": "http://id.ndl.go.jp/bib/6319140"
+        },
+        {
+          "@type": "cir:URI",
+          "@value": "https://ndlsearch.ndl.go.jp/books/R000000004-I6319140"
+        },
+        {
+          "@type": "cir:NAID",
+          "@value": "40005559743"
+        }
+      ],
+      "dc:source": [
+        {
+          "@id": "http://id.ndl.go.jp/bib/6319140"
+        },
+        {
+          "@id": "https://ndlsearch.ndl.go.jp/books/R000000004-I6319140"
+        }
+      ]
+    },
+    {
+      "@id": "https://cir.nii.ac.jp/crid/1571417127897702784",
+      "@type": "item",
+      "title": "O1-076 産前教育プログラムが父親の育児・家事行動に及ぼす影響 : 仕事と育児・家事時間の調整に焦点をあてて(育児2,一般口演)",
+      "link": {
+        "@id": "https://cir.nii.ac.jp/crid/1571417127897702784"
+      },
+      "rdfs:seeAlso": {
+        "@id": "https://cir.nii.ac.jp/crid/1571417127897702784.json"
+      },
+      "dc:creator": [
+        "川口 弥恵子",
+        "松原 まなみ"
+      ],
+      "dc:publisher": "日本母性衛生学会",
+      "dc:type": "Article",
+      "prism:publicationName": "母性衛生",
+      "prism:issn": "03881512",
+      "prism:volume": "53",
+      "prism:number": "3",
+      "prism:startingPage": "156",
+      "prism:publicationDate": "2012-11-16",
+      "dc:identifier": [
+        {
+          "@type": "cir:NAID",
+          "@value": "110009608660"
+        },
+        {
+          "@type": "cir:URI",
+          "@value": "https://search.jamas.or.jp/link/ui/2013094592"
+        }
+      ],
+      "dc:source": [
+        {
+          "@id": "https://search.jamas.or.jp/link/ui/2013094592"
+        }
+      ]
+    },
+    {
+      "@id": "https://cir.nii.ac.jp/crid/1520290884864520576",
+      "@type": "item",
+      "title": "産前教育プログラムが父親の育児・家事行動に及ぼす影響 : 仕事と育児･家事時間の調整に焦点をあてて",
+      "link": {
+        "@id": "https://cir.nii.ac.jp/crid/1520290884864520576"
+      },
+      "rdfs:seeAlso": {
+        "@id": "https://cir.nii.ac.jp/crid/1520290884864520576.json"
+      },
+      "dc:creator": [
+        "川口 弥恵子",
+        "松原 まなみ",
+        "井口 亜由",
+        "小路 ますみ"
+      ],
+      "dc:publisher": "久留米 : 聖マリア学院大学",
+      "dc:type": "Article",
+      "prism:publicationName": "聖マリア学院大学紀要 = Bulletin of St. Mary's College / 聖マリア学院大学紀要編集委員会 編",
+      "prism:issn": "21850054",
+      "prism:volume": "7",
+      "prism:startingPage": "3",
+      "prism:endingPage": "15",
+      "prism:publicationDate": "2016",
+      "dc:identifier": [
+        {
+          "@type": "cir:NDL_BIB_ID",
+          "@value": "027252316"
+        },
+        {
+          "@type": "cir:URI",
+          "@value": "http://id.ndl.go.jp/bib/027252316"
+        },
+        {
+          "@type": "cir:URI",
+          "@value": "https://ndlsearch.ndl.go.jp/books/R000000004-I027252316"
+        },
+        {
+          "@type": "cir:NAID",
+          "@value": "40020802781"
+        },
+        {
+          "@type": "cir:URI",
+          "@value": "https://search.jamas.or.jp/link/ui/2016262609"
+        }
+      ],
+      "dc:subject": [
+        "父親",
+        "育児・家事行動",
+        "産前教育",
+        "Fathers",
+        "Childcare and Housework",
+        "Prenatal Education Program"
+      ],
+      "dc:source": [
+        {
+          "@id": "http://id.ndl.go.jp/bib/027252316"
+        },
+        {
+          "@id": "https://ndlsearch.ndl.go.jp/books/R000000004-I027252316"
+        },
+        {
+          "@id": "https://search.jamas.or.jp/link/ui/2016262609"
+        }
+      ]
+    },
+    {
+      "@id": "https://cir.nii.ac.jp/crid/1522825130353535360",
+      "@type": "item",
+      "title": "育児の役割分担",
+      "link": {
+        "@id": "https://cir.nii.ac.jp/crid/1522825130353535360"
+      },
+      "rdfs:seeAlso": {
+        "@id": "https://cir.nii.ac.jp/crid/1522825130353535360.json"
+      },
+      "dc:creator": [
+        "渋谷 紀子"
+      ],
+      "dc:publisher": "東京 : 総合医学社",
+      "dc:type": "Article",
+      "prism:publicationName": "小児科臨床 = Japanese journal of pediatrics",
+      "prism:issn": "0021518X",
+      "prism:volume": "56",
+      "prism:number": "4",
+      "prism:startingPage": "471",
+      "prism:endingPage": "479",
+      "prism:publicationDate": "2003-04",
+      "dc:identifier": [
+        {
+          "@type": "cir:NDL_BIB_ID",
+          "@value": "6503778"
+        },
+        {
+          "@type": "cir:URI",
+          "@value": "http://id.ndl.go.jp/bib/6503778"
+        },
+        {
+          "@type": "cir:URI",
+          "@value": "https://ndlsearch.ndl.go.jp/books/R000000004-I6503778"
+        },
+        {
+          "@type": "cir:NAID",
+          "@value": "40005730404"
+        },
+        {
+          "@type": "cir:URI",
+          "@value": "https://search.jamas.or.jp/link/ui/2003191362"
+        }
+      ],
+      "dc:subject": [
+        "家事参画度",
+        "家事時間",
+        "保育園",
+        "ファミリーサポートセンター",
+        "子育て支援"
+      ],
+      "dc:source": [
+        {
+          "@id": "http://id.ndl.go.jp/bib/6503778"
+        },
+        {
+          "@id": "https://ndlsearch.ndl.go.jp/books/R000000004-I6503778"
+        },
+        {
+          "@id": "https://search.jamas.or.jp/link/ui/2003191362"
+        }
+      ]
+    },
+    {
+      "@id": "https://cir.nii.ac.jp/crid/1570854177939486720",
+      "@type": "item",
+      "title": "O2-069 育児・家事行動の促進を目的とする父親学級に参加した父親で育児・家事時間に変化がみられた事例の特徴(育児2,一般口演)",
+      "link": {
+        "@id": "https://cir.nii.ac.jp/crid/1570854177939486720"
+      },
+      "rdfs:seeAlso": {
+        "@id": "https://cir.nii.ac.jp/crid/1570854177939486720.json"
+      },
+      "dc:creator": [
+        "山口 咲奈枝",
+        "佐藤 幸子"
+      ],
+      "dc:publisher": "日本母性衛生学会",
+      "dc:type": "Article",
+      "prism:publicationName": "母性衛生",
+      "prism:issn": "03881512",
+      "prism:volume": "54",
+      "prism:number": "3",
+      "prism:startingPage": "253",
+      "prism:publicationDate": "2013-10-04",
+      "dc:identifier": [
+        {
+          "@type": "cir:NAID",
+          "@value": "110009731392"
+        },
+        {
+          "@type": "cir:URI",
+          "@value": "https://search.jamas.or.jp/link/ui/2013375714"
+        }
+      ],
+      "dc:source": [
+        {
+          "@id": "https://search.jamas.or.jp/link/ui/2013375714"
+        }
+      ]
+    },
+    {
+      "@id": "https://cir.nii.ac.jp/crid/1390014481305875072",
+      "@type": "item",
+      "title": "乳幼児を持つ父母の家事・育児時間が母親の育児期ストレスに及ぼす影響 -全国調査(保育・子育て3万人調査)の経年比較より-",
+      "link": {
+        "@id": "https://cir.nii.ac.jp/crid/1390014481305875072"
+      },
+      "rdfs:seeAlso": {
+        "@id": "https://cir.nii.ac.jp/crid/1390014481305875072.json"
+      },
+      "dc:creator": [
+        "野澤 義隆",
+        "山本 理絵",
+        "神谷 哲司",
+        "戸田 有一"
+      ],
+      "dc:publisher": "大阪教育大学 幼児教育学研究室",
+      "dc:type": "Article",
+      "prism:publicationName": "エデュケア",
+      "prism:volume": "34",
+      "prism:startingPage": "1",
+      "prism:endingPage": "8",
+      "prism:publicationDate": "2014-03-31",
+      "description": "本研究は,父母の家事・育児期ストレスへの影響を検討した。対象は,保育園,幼稚園に通う乳幼児の父母であり,2003年度は10,742件,2008年度は3,590件である。2003年度と2008年度のデータを用いて,5年間の変化を検討した。その結果,本研究では,(1)2003年度と2008年度において,生活全般の悩みが増えるほど育児期ストレスが増加すること,子育ての協同が増加すると育児期ストレスが減少することが示唆された,(2)2003年度と2008年度において,正規雇用と非正規雇用よりも専業主婦の方が,育児期ストレスが有意に高いことが示唆された。この結果の要因としての父母の家事・育児時間や家庭の経済状況の変化に関して議論がなされた。|This study was aimed to investigate the effect of housework and childcare time of parents with infants on the stress response of mothers. Participants were 10,742 (year 2003) and 3,500 (year 2008) parents of infants attending nursery school or kindergarten. The data from year 2003 and year 2008 were compared to see the difference beyond five years separation. As a result, regression analysiss suggested (1) the stress response was positively influenced with the daily-experienced troubles, and was negatively influenced with cooperative parenting in the data of each year. (2) The stress response was significantly higher with the full-time housewife than with non-regular/regular employees in the data of each year. Possible related factors such as economic conditions of the family of the family and housework/childcare time of parents were discussed.",
+      "dc:identifier": [
+        {
+          "@type": "cir:DOI",
+          "@value": "10.32287/td00028448"
+        },
+        {
+          "@type": "cir:URI",
+          "@value": "https://osaka-kyoiku.repo.nii.ac.jp/records/2093143"
+        },
+        {
+          "@type": "cir:NAID",
+          "@value": "120005626065"
+        }
+      ],
+      "dc:subject": [
+        "母親",
+        "育児期ストレス",
+        "家事時間",
+        "育児時間",
+        "ワーク・ライフ・バランス",
+        "mothers",
+        "stress response",
+        "housework time",
+        "childcare time",
+        "work life balance"
+      ],
+      "dc:source": [
+        {
+          "@id": "https://osaka-kyoiku.repo.nii.ac.jp/records/2093143"
+        },
+        {
+          "@id": "http://ir.lib.osaka-kyoiku.ac.jp/dspace/handle/123456789/28448"
+        }
+      ]
+    },
+    {
+      "@id": "https://cir.nii.ac.jp/crid/1390282763099652736",
+      "@type": "item",
+      "title": "392）仕事と育児・家事時間の調整に関する父親の意識構造",
+      "link": {
+        "@id": "https://cir.nii.ac.jp/crid/1390282763099652736"
+      },
+      "rdfs:seeAlso": {
+        "@id": "https://cir.nii.ac.jp/crid/1390282763099652736.json"
+      },
+      "dc:creator": [
+        "川口 弥恵子",
+        "小路 ますみ",
+        "松原 まなみ",
+        "吉田 亜由"
+      ],
+      "dc:publisher": "一般社団法人 日本看護研究学会",
+      "dc:type": "Article",
+      "prism:publicationName": "日本看護研究学会雑誌",
+      "prism:issn": "2188-3599",
+      "prism:volume": "35",
+      "prism:number": "3",
+      "prism:startingPage": "3_322",
+      "prism:endingPage": "3_322",
+      "prism:publicationDate": "2012-06-07",
+      "dc:identifier": [
+        {
+          "@type": "cir:DOI",
+          "@value": "10.15065/jjsnr.20120607416"
+        },
+        {
+          "@type": "cir:NAID",
+          "@value": "130007594464"
+        }
+      ]
+    },
+    {
+      "@id": "https://cir.nii.ac.jp/crid/1390282680534810240",
+      "@type": "item",
+      "title": "タイ生活時間調査の属性別分析からみる男女のライフスタイルの特徴",
+      "link": {
+        "@id": "https://cir.nii.ac.jp/crid/1390282680534810240"
+      },
+      "rdfs:seeAlso": {
+        "@id": "https://cir.nii.ac.jp/crid/1390282680534810240.json"
+      },
+      "dc:creator": [
+        "中山 節子",
+        "大竹 美登利"
+      ],
+      "dc:publisher": "一般社団法人 日本家政学会",
+      "dc:type": "Article",
+      "prism:publicationName": "一般社団法人日本家政学会研究発表要旨集",
+      "prism:volume": "60",
+      "prism:number": "0",
+      "prism:startingPage": "105",
+      "prism:endingPage": "105",
+      "prism:publicationDate": "2008",
+      "description": "目的： 我々は、2005年11月に実施したタイ生活時間調査を実施し、バンコックの都市部に住む男女のペイドワーク、アンペイドワーク時間の相違を明らかにした。本報告では、このデータを更に、年齢階層別、家族形態別、既婚未婚別、就業未就業別、収入階層別に分析することで、タイ政府調査などで明らかにできない、個々の属性による生活時間の相違を分析し、タイの生活時間における問題を明らかにする。<BR>方法： 分析データには、Kulkanit Rashainbunyawat（Kasetsart University）らを中心とするタイの調査チームとともに行った生活時間調査の結果を用いた。サンプル数は、平日1164、土曜1217、休日1164である。<BR>結果：年齢階層別では、雇用における仕事時間は男女において差が見られず、男女ともに41～50歳が最も長い。家事・育児などのアンペイドワークは男女差があり、男女ともに60歳以上の家事時間が最も長い。家族形態別にみると、子どもの有無により男性はペイドワーク時間に大きな違いは見られないが、女性は違いが見られた。また、子どもの有無により、育児時間を除く家事時間に大きな男女差があった。これは既婚未婚別においても、同様の傾向が見られた。就業未就業別では、就業者は、雇用における仕事時間や宗教活動などの時間において男女差はみられないが、家事時間、社会的文化的時間に男女の差が見られた。収入階層別では、男性は収入が高い方がペイドワーク時間も長いが、女性は必ずしもそうではない。男女ともに収入の高い方が家事時間は短い結果であった。",
+      "abstractLicenseFlag": "disallow",
+      "dc:identifier": [
+        {
+          "@type": "cir:DOI",
+          "@value": "10.11428/kasei.60.0.105.0"
+        },
+        {
+          "@type": "cir:NAID",
+          "@value": "130006956504"
+        }
+      ],
+      "dc:subject": [
+        "タイ生活時間調査",
+        "年齢階層別",
+        "家族形態別",
+        "既婚未婚別",
+        "就業未就業別",
+        "収入階層別"
+      ]
+    },
+    {
+      "@id": "https://cir.nii.ac.jp/crid/1390282681311027712",
+      "@type": "item",
+      "title": "共働き家庭における家事分担と家事による居間空間の重層的利用",
+      "link": {
+        "@id": "https://cir.nii.ac.jp/crid/1390282681311027712"
+      },
+      "rdfs:seeAlso": {
+        "@id": "https://cir.nii.ac.jp/crid/1390282681311027712.json"
+      },
+      "dc:creator": [
+        "萩原 美智子",
+        "北浦 かほる"
+      ],
+      "dc:publisher": "一般社団法人 日本家政学会",
+      "dc:type": "Article",
+      "prism:publicationName": "日本家政学会誌",
+      "prism:issn": "0913-5227",
+      "prism:volume": "46",
+      "prism:number": "4",
+      "prism:startingPage": "347",
+      "prism:endingPage": "354",
+      "prism:publicationDate": "1995",
+      "description": "Our concern is to consider the houses of DEWKS' families. In this report we analyze the influence of the mother's employment condition on the housework sharing, working space and communication space. We surveyed 301 couples and obtained information through a questionnaire. The findings of our survey are as follows : <BR>1) The majority of husbands share in no housework. And wives, who are even full-time workers, are charged with about 90% of the housework.<BR>2) The wives, both full-time and part-time workers, spend about 40% of their waking hours on housework at home.<BR>3) The full-time working wives shorten the time for cleaning and cooking, and spend more time for upbringing than part-time working wives.<BR>4) The housework allotted to husbands is chiefly in the area of child rearing. Though the husbands have the intention of sharing in child rearing, they make little time for it.<BR>5) Nearly half of housework-time is spent in the kitchen, followed by the living room and the dining room.<BR>6) The living rooms are used for personal activities, housework and activities that dislike others' presence, in addition to the original purposes. The living rooms in DEWKS' families are used as a multipurpose room.",
+      "abstractLicenseFlag": "disallow",
+      "dc:identifier": [
+        {
+          "@type": "cir:DOI",
+          "@value": "10.11428/jhej1987.46.347"
+        },
+        {
+          "@type": "cir:NAID",
+          "@value": "130003851303"
+        }
+      ],
+      "dc:subject": [
+        "家事",
+        "共働き家庭",
+        "居間",
+        "常勤",
+        "養育態度",
+        "家族室"
+      ]
+    },
+    {
+      "@id": "https://cir.nii.ac.jp/crid/1050292572146942464",
+      "@type": "item",
+      "title": "育児ケア成果データの見える化による男女共同参画の気づき意識の支援に向けた検討",
+      "link": {
+        "@id": "https://cir.nii.ac.jp/crid/1050292572146942464"
+      },
+      "rdfs:seeAlso": {
+        "@id": "https://cir.nii.ac.jp/crid/1050292572146942464.json"
+      },
+      "dc:creator": [
+        "西川, 奏",
+        "山根, 麻美",
+        "若狭, 節子",
+        "上川原, ひろみ",
+        "山内, 寿代",
+        "皆月, 昭則"
+      ],
+      "dc:publisher": "情報処理学会",
+      "dc:type": "Article",
+      "prism:publicationName": "第79回全国大会講演論文集",
+      "prism:volume": "2017",
+      "prism:number": "1",
+      "prism:startingPage": "359",
+      "prism:endingPage": "360",
+      "prism:publicationDate": "2017-03-16",
+      "description": "政府が主導する男女共同参画社会をめざす背景には，座視できない大きな社会問題があることが明らかになっている．近年の調査によると，乳幼児世帯での1日あたりの育児時間が父親で約40分，母親で約180分という報告がある．母親の育児時間に家事時間を加算すると，女性の育児・家事負担は過大になっている．男性は朝に出勤し，夕方に帰宅する生活パターンが多く，昼間の女性の育児・家事成果は見えにくく，気づき意識を得ることは困難である．本研究では，1歳未満児の育児ケア（授乳とおむつ交換の回数）データをスマートフォンアプリケーションで入力しクラウドで管理することで，外出時の男性や親族と共有する機能を実装し検証した．",
+      "dc:identifier": [
+        {
+          "@type": "cir:URI",
+          "@value": "https://ipsj.ixsq.nii.ac.jp/records/181582"
+        },
+        {
+          "@type": "cir:NAID",
+          "@value": "170000175321"
+        }
+      ],
+      "dc:subject": [
+        "インタフェース"
+      ],
+      "dc:source": [
+        {
+          "@id": "https://ipsj.ixsq.nii.ac.jp/records/181582"
+        },
+        {
+          "@id": "http://id.nii.ac.jp/1001/00181494/"
+        }
+      ]
+    }
+  ]
+}

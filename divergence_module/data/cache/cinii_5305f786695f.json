@@ -1,0 +1,115 @@
+{
+  "@context": {
+    "@vocab": "http://purl.org/rss/1.0/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "dc": "http://purl.org/dc/elements/1.1/",
+    "prism": "http://prismstandard.org/namespaces/basic/2.0/",
+    "ndl": "http://ndl.go.jp/dcndl/terms",
+    "opensearch": "http://a9.com/-/spec/opensearch/1.1/",
+    "cir": "https://cir.nii.ac.jp/schema/1.0/",
+    "@language": "ja"
+  },
+  "@id": "https://cir.nii.ac.jp/opensearch/articles?q=%E5%AE%B6%E4%BA%8B%E3%81%AE%E5%8A%B9%E7%8E%87%E5%8C%96&count=10&start=1&sortorder=4&lang=ja&format=json",
+  "@type": "channel",
+  "title": "CiNii Research articles - 家事の効率化 10 1 4 ja json",
+  "description": "CiNii Research articles - 家事の効率化 10 1 4 ja json",
+  "link": {
+    "@id": "https://cir.nii.ac.jp/opensearch/articles?q=%E5%AE%B6%E4%BA%8B%E3%81%AE%E5%8A%B9%E7%8E%87%E5%8C%96&count=10&start=1&sortorder=4&lang=ja&format=json"
+  },
+  "dc:date": "2026-06-09T13:55:26.931+09:00",
+  "opensearch:totalResults": 2,
+  "opensearch:startIndex": 1,
+  "opensearch:itemsPerPage": 2,
+  "items": [
+    {
+      "@id": "https://cir.nii.ac.jp/crid/1520854804760310912",
+      "@type": "item",
+      "title": "紀文 家庭のお惣菜調査'99--週平均調理回数5.8回/平均調理時間47.5分/65.9%が週1回以上お惣菜を利用/家事の効率化の高まりに伴い、需要は増えると予測",
+      "link": {
+        "@id": "https://cir.nii.ac.jp/crid/1520854804760310912"
+      },
+      "rdfs:seeAlso": {
+        "@id": "https://cir.nii.ac.jp/crid/1520854804760310912.json"
+      },
+      "dc:creator": [
+        "紀文食品"
+      ],
+      "dc:publisher": "東京 : 光琳",
+      "dc:type": "Article",
+      "prism:publicationName": "食の科学",
+      "prism:issn": "02871734",
+      "prism:number": "256",
+      "prism:startingPage": "59",
+      "prism:endingPage": "47",
+      "prism:publicationDate": "1999-06",
+      "description": "資料形態 : テキストデータ プレーンテキスト",
+      "dc:identifier": [
+        {
+          "@type": "cir:NDL_BIB_ID",
+          "@value": "4724468"
+        },
+        {
+          "@type": "cir:URI",
+          "@value": "http://id.ndl.go.jp/bib/4724468"
+        },
+        {
+          "@type": "cir:URI",
+          "@value": "https://ndlsearch.ndl.go.jp/books/R000000004-I4724468"
+        },
+        {
+          "@type": "cir:NAID",
+          "@value": "40004070449"
+        }
+      ],
+      "dc:source": [
+        {
+          "@id": "http://id.ndl.go.jp/bib/4724468"
+        },
+        {
+          "@id": "https://ndlsearch.ndl.go.jp/books/R000000004-I4724468"
+        }
+      ]
+    },
+    {
+      "@id": "https://cir.nii.ac.jp/crid/1390282680533738752",
+      "@type": "item",
+      "title": "食器洗い乾燥機使用者の意識と行動実態",
+      "link": {
+        "@id": "https://cir.nii.ac.jp/crid/1390282680533738752"
+      },
+      "rdfs:seeAlso": {
+        "@id": "https://cir.nii.ac.jp/crid/1390282680533738752.json"
+      },
+      "dc:creator": [
+        "杉田 満",
+        "宮川 聖子",
+        "井上 紀子"
+      ],
+      "dc:publisher": "一般社団法人 日本家政学会",
+      "dc:type": "Article",
+      "prism:publicationName": "一般社団法人日本家政学会研究発表要旨集",
+      "prism:volume": "58",
+      "prism:number": "0",
+      "prism:startingPage": "43",
+      "prism:endingPage": "43",
+      "prism:publicationDate": "2006",
+      "description": "【目的】近年、食器洗い乾燥機（以下：食洗機）をはじめとする新しいキッチン家電製品の普及が加速している。この背景には、家事に対する生活者の意識の変化があり、新家電を取り入れた結果、さらに家事行動が変化していくことが予想される。そこで、食洗機使用者の家事に対する意識と行動実態を詳細に調べ、問題点の抽出を行うことを目的として今回の調査を実施した。【方法】(1)２０_から_５０代の食洗機を所有している既婚女性３００名を対象としてインターネット調査を実施し、食洗機の使用実態、生活や家事に対する意識について回答を得た。同年代の食洗機を所有していない既婚女性３００名に対しても、同時期に同じ項目による意識調査を実施した。(2)食洗機を所有している女性２８４名を対象として、郵送による自記入式調査を実施し、食洗機を用いた「食器洗い」の満足度や行動の詳細について回答を得た。【結果】(1)食洗機の所有／非所有にかかわらず、『食洗機は贅沢である』『食洗機利用は家事の手抜き』といった意識はもはや小さく、食洗機所有者は非所有者と比べて、家事の効率化や家族での分担の意識がより高かった。(2)食洗機を用いた「食器洗い」の満足度は「満足」「やや満足」を合わせて８０％を超えているが、詳細を調べると「汚れ落ち」「仕上がり」などの面において不満点も見られた。",
+      "abstractLicenseFlag": "disallow",
+      "dc:identifier": [
+        {
+          "@type": "cir:DOI",
+          "@value": "10.11428/kasei.58.0.43.0"
+        },
+        {
+          "@type": "cir:NAID",
+          "@value": "130006955144"
+        }
+      ],
+      "dc:subject": [
+        "キッチン",
+        "食器洗い乾燥機"
+      ]
+    }
+  ]
+}

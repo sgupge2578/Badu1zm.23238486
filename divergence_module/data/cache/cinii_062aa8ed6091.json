@@ -1,0 +1,196 @@
+{
+  "@context": {
+    "@vocab": "http://purl.org/rss/1.0/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "dc": "http://purl.org/dc/elements/1.1/",
+    "prism": "http://prismstandard.org/namespaces/basic/2.0/",
+    "ndl": "http://ndl.go.jp/dcndl/terms",
+    "opensearch": "http://a9.com/-/spec/opensearch/1.1/",
+    "cir": "https://cir.nii.ac.jp/schema/1.0/",
+    "@language": "ja"
+  },
+  "@id": "https://cir.nii.ac.jp/opensearch/articles?q=%E5%85%B1%E5%83%8D%E3%81%8D%20%E5%AE%B6%E4%BA%8B%E8%B2%A0%E6%8B%85&count=10&start=1&sortorder=4&lang=ja&format=json",
+  "@type": "channel",
+  "title": "CiNii Research articles - 共働き 家事負担 10 1 4 ja json",
+  "description": "CiNii Research articles - 共働き 家事負担 10 1 4 ja json",
+  "link": {
+    "@id": "https://cir.nii.ac.jp/opensearch/articles?q=%E5%85%B1%E5%83%8D%E3%81%8D%20%E5%AE%B6%E4%BA%8B%E8%B2%A0%E6%8B%85&count=10&start=1&sortorder=4&lang=ja&format=json"
+  },
+  "dc:date": "2026-06-10T15:34:51.079+09:00",
+  "opensearch:totalResults": 4,
+  "opensearch:startIndex": 1,
+  "opensearch:itemsPerPage": 4,
+  "items": [
+    {
+      "@id": "https://cir.nii.ac.jp/crid/1520584565609949952",
+      "@type": "item",
+      "title": "株式会社一条工務店「共働き夫婦の家事シェアに関する意識調査2024」 依然として高い女性の家事負担率",
+      "link": {
+        "@id": "https://cir.nii.ac.jp/crid/1520584565609949952"
+      },
+      "rdfs:seeAlso": {
+        "@id": "https://cir.nii.ac.jp/crid/1520584565609949952.json"
+      },
+      "dc:publisher": "東京 : 労務研究所",
+      "dc:type": "Article",
+      "prism:publicationName": "旬刊福利厚生",
+      "prism:issn": "1343568X",
+      "prism:number": "2407",
+      "prism:startingPage": "55",
+      "prism:publicationDate": "2025-01-14",
+      "dc:identifier": [
+        {
+          "@type": "cir:NDL_BIB_ID",
+          "@value": "033911008"
+        },
+        {
+          "@type": "cir:URI",
+          "@value": "http://id.ndl.go.jp/bib/033911008"
+        },
+        {
+          "@type": "cir:URI",
+          "@value": "https://ndlsearch.ndl.go.jp/books/R000000004-I033911008"
+        }
+      ],
+      "dc:source": [
+        {
+          "@id": "http://id.ndl.go.jp/bib/033911008"
+        },
+        {
+          "@id": "https://ndlsearch.ndl.go.jp/books/R000000004-I033911008"
+        }
+      ]
+    },
+    {
+      "@id": "https://cir.nii.ac.jp/crid/1523951029635371136",
+      "@type": "item",
+      "title": "「家事」の評価の再検討 : 子どものいる共働き女性の「家事負担」",
+      "link": {
+        "@id": "https://cir.nii.ac.jp/crid/1523951029635371136"
+      },
+      "rdfs:seeAlso": {
+        "@id": "https://cir.nii.ac.jp/crid/1523951029635371136.json"
+      },
+      "dc:creator": [
+        "藤田 朋子"
+      ],
+      "dc:publisher": "[東京] : 日本フェミニスト経済学会",
+      "dc:type": "Article",
+      "prism:publicationName": "経済社会とジェンダー : 日本フェミニスト経済学会誌 : journal of feminist economics Japan / 日本フェミニスト経済学会事務局 編",
+      "prism:issn": "24322296",
+      "prism:volume": "3",
+      "prism:startingPage": "107",
+      "prism:endingPage": "120",
+      "prism:publicationDate": "2018-06",
+      "dc:identifier": [
+        {
+          "@type": "cir:NDL_BIB_ID",
+          "@value": "029506233"
+        },
+        {
+          "@type": "cir:URI",
+          "@value": "http://id.ndl.go.jp/bib/029506233"
+        },
+        {
+          "@type": "cir:URI",
+          "@value": "https://ndlsearch.ndl.go.jp/books/R000000004-I029506233"
+        },
+        {
+          "@type": "cir:NAID",
+          "@value": "40021803817"
+        }
+      ],
+      "dc:subject": [
+        "家事労働",
+        "女性の活躍推進",
+        "男女共同参画",
+        "ジェンダー"
+      ],
+      "dc:source": [
+        {
+          "@id": "http://id.ndl.go.jp/bib/029506233"
+        },
+        {
+          "@id": "https://ndlsearch.ndl.go.jp/books/R000000004-I029506233"
+        }
+      ]
+    },
+    {
+      "@id": "https://cir.nii.ac.jp/crid/1390282680587629568",
+      "@type": "item",
+      "title": "インターネットにおける出産と子育てに関する情報収集・交換の現状について",
+      "link": {
+        "@id": "https://cir.nii.ac.jp/crid/1390282680587629568"
+      },
+      "rdfs:seeAlso": {
+        "@id": "https://cir.nii.ac.jp/crid/1390282680587629568.json"
+      },
+      "dc:creator": [
+        "吉住 優子",
+        "辻川 ひとみ"
+      ],
+      "dc:publisher": "一般社団法人 日本デザイン学会",
+      "dc:type": "Article",
+      "prism:publicationName": "日本デザイン学会研究発表大会概要集",
+      "prism:volume": "54",
+      "prism:number": "0",
+      "prism:startingPage": "H04",
+      "prism:endingPage": "H04",
+      "prism:publicationDate": "2007",
+      "description": "本研究ではインターネットによって得ることのできる子育てに関する情報内容と量により、職業を持ちながら結婚、さらに出産を選択する、もしくは選択を希望している女性たちによる、情報収集と情報交換内容の調査を行った。今日の日本ではインターネットの普及が進み情報化社会といわれており、情報豊富かつ選択自由な状況下において、女性たちがどのような情報を参考とし自らのライフプランを選択しているのかを把握することが目的である。調査方法は、Google、Yahooにおける「ワーキングマザー」検索にてヒットした各上位10サイトと先行研究よりキーワードを110個抽出し、Google上位100サイトによるキーワード検索数を計った。結果として、キーワード検索数の上位の内容は、育児に関する出来事の情報交換とそれに伴う子どもの成長確認、妊娠中の体の変化や留意点の情報提供、地域毎による保育園の利便性に関する情報収集であった。またそれに続き、社会制度や身内・地域によるサポートや家事負担の軽減方法についての情報交換が数多く見受けられ、働き方についての不安感や自分の時間を大切にしたいといった意識の現れも窺うことができた。",
+      "abstractLicenseFlag": "disallow",
+      "dc:identifier": [
+        {
+          "@type": "cir:DOI",
+          "@value": "10.11247/jssd.54.0.h04.0"
+        },
+        {
+          "@type": "cir:NAID",
+          "@value": "130004637581"
+        }
+      ],
+      "dc:subject": [
+        "childcare",
+        "double-income couples",
+        "internet"
+      ]
+    },
+    {
+      "@id": "https://cir.nii.ac.jp/crid/1390019435379248384",
+      "@type": "item",
+      "title": "子育て世代の洗濯行動の実態と今後の洗濯空間のあり方",
+      "link": {
+        "@id": "https://cir.nii.ac.jp/crid/1390019435379248384"
+      },
+      "rdfs:seeAlso": {
+        "@id": "https://cir.nii.ac.jp/crid/1390019435379248384.json"
+      },
+      "dc:creator": [
+        "梶木 典子"
+      ],
+      "dc:publisher": "一般社団法人 日本家政学会",
+      "dc:type": "Article",
+      "prism:publicationName": "一般社団法人日本家政学会研究発表要旨集",
+      "prism:volume": "76",
+      "prism:number": "0",
+      "prism:startingPage": "1",
+      "prism:publicationDate": "2024",
+      "description": "<p><b>目的　</b>近年、共働き世帯が増加に伴い子育て世代の家事負担は大きくなり、家事作業の負担をできる限り少なくするための住まいのニーズが高まっている。洗濯作業の一連の工程とそれに対応する空間のあり方も家事軽減に寄与できると考えられる。本研究では、子育て世代を対象に洗濯行動の実態を明らかにし、これからの洗濯空間のあり方について検討することを目的とする。</p><p><b>方法</b>　調査は18才までの子どものいる世帯を対象とし、Googleフォームにより実施。期間は2023年10月16日～11月11日。有効回答数は203件。</p><p><b>結果　</b>洗濯機・乾燥機の所持は、全体ではドラム式乾燥機(乾燥機能付き)が最も多かった(36.9％）。単体の衣類乾燥機の所持は、戸建住宅は約１割、集合住宅は約0.3割と少なく、ガス式と電気式はほぼ同率であった。主な乾燥方法は、戸建住宅・集合住宅ともに「室外干し」が最も多く、次いで戸建住宅は室内干し（26.7％）、集合住宅は乾燥機（洗濯機付き）（16.7％）が多かった。洗濯行動が複数の場所で行われており、そのため動線が長くなり家事の負担となっていることがわかった。「室内干し」の場所で最も多かった「居間・リビング」は、室内干し空間と化し、視覚的な散らかりや混雑感から、家族が集まりくつろぐ場である本来の機能が損なわれていることが示唆された。（本研究は2023年度神戸女子大学卒業生：四方朱音との共同研究である。）</p>",
+      "abstractLicenseFlag": "disallow",
+      "dc:identifier": [
+        {
+          "@type": "cir:DOI",
+          "@value": "10.11428/kasei.76.0_1"
+        }
+      ],
+      "dc:subject": [
+        "子育て世代",
+        "洗濯行動",
+        "洗濯空間",
+        "家事動線",
+        "洗濯設備機器"
+      ]
+    }
+  ]
+}

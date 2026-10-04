@@ -1,0 +1,522 @@
+{
+  "@context": {
+    "@vocab": "http://purl.org/rss/1.0/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "dc": "http://purl.org/dc/elements/1.1/",
+    "prism": "http://prismstandard.org/namespaces/basic/2.0/",
+    "ndl": "http://ndl.go.jp/dcndl/terms",
+    "opensearch": "http://a9.com/-/spec/opensearch/1.1/",
+    "cir": "https://cir.nii.ac.jp/schema/1.0/",
+    "@language": "ja"
+  },
+  "@id": "https://cir.nii.ac.jp/opensearch/articles?q=%E3%83%95%E3%83%AB%E3%82%BF%E3%82%A4%E3%83%A0%E5%8B%A4%E5%8B%99&count=10&start=1&sortorder=4&lang=ja&format=json",
+  "@type": "channel",
+  "title": "CiNii Research articles - フルタイム勤務 10 1 4 ja json",
+  "description": "CiNii Research articles - フルタイム勤務 10 1 4 ja json",
+  "link": {
+    "@id": "https://cir.nii.ac.jp/opensearch/articles?q=%E3%83%95%E3%83%AB%E3%82%BF%E3%82%A4%E3%83%A0%E5%8B%A4%E5%8B%99&count=10&start=1&sortorder=4&lang=ja&format=json"
+  },
+  "dc:date": "2026-06-10T14:52:56.726+09:00",
+  "opensearch:totalResults": 49,
+  "opensearch:startIndex": 1,
+  "opensearch:itemsPerPage": 10,
+  "items": [
+    {
+      "@id": "https://cir.nii.ac.jp/crid/1520010380367099008",
+      "@type": "item",
+      "title": "フルタイム勤務? それとも短時間勤務?",
+      "link": {
+        "@id": "https://cir.nii.ac.jp/crid/1520010380367099008"
+      },
+      "rdfs:seeAlso": {
+        "@id": "https://cir.nii.ac.jp/crid/1520010380367099008.json"
+      },
+      "dc:creator": [
+        "川島 康夫"
+      ],
+      "dc:publisher": "東京 : 学事出版",
+      "dc:type": "Article",
+      "prism:publicationName": "学校事務",
+      "prism:volume": "68",
+      "prism:number": "7",
+      "prism:startingPage": "18",
+      "prism:endingPage": "21",
+      "prism:publicationDate": "2017-07",
+      "dc:identifier": [
+        {
+          "@type": "cir:NDL_BIB_ID",
+          "@value": "028304289"
+        },
+        {
+          "@type": "cir:URI",
+          "@value": "http://id.ndl.go.jp/bib/028304289"
+        },
+        {
+          "@type": "cir:URI",
+          "@value": "https://ndlsearch.ndl.go.jp/books/R000000004-I028304289"
+        },
+        {
+          "@type": "cir:NAID",
+          "@value": "40021229018"
+        }
+      ],
+      "dc:source": [
+        {
+          "@id": "http://id.ndl.go.jp/bib/028304289"
+        },
+        {
+          "@id": "https://ndlsearch.ndl.go.jp/books/R000000004-I028304289"
+        }
+      ]
+    },
+    {
+      "@id": "https://cir.nii.ac.jp/crid/1390009224920376320",
+      "@type": "item",
+      "title": "文献にみる看護職のフルタイム勤務者と短時間勤務者の協働",
+      "link": {
+        "@id": "https://cir.nii.ac.jp/crid/1390009224920376320"
+      },
+      "rdfs:seeAlso": {
+        "@id": "https://cir.nii.ac.jp/crid/1390009224920376320.json"
+      },
+      "dc:creator": [
+        "大儀 律子",
+        "萩原 桂子",
+        "野田部 恵",
+        "櫻井 知賀",
+        "浦上 諒子",
+        "坂口 桃子"
+      ],
+      "dc:publisher": "大阪市立大学大学院看護学研究科",
+      "dc:type": "Article",
+      "prism:publicationName": "大阪市立大学看護学雑誌",
+      "prism:issn": "1349-953X",
+      "prism:volume": "11",
+      "prism:startingPage": "37",
+      "prism:endingPage": "44",
+      "prism:publicationDate": "2015-03",
+      "description": "短時間勤務者は政策的動向も相まって、今後さらに増加すると考えられるが、フルタイム勤務者との協働をする上での課題は、現在まで十分に検証されていない。短時間勤務者とフルタイム勤務者の協働の実態を、職場環境、個人の背景や就業状況、看護サービスマネジメントと実践の3側面から文献検討を行った。その結果、(1)短時間勤務者制度の文献数は2007年を契機に増えている、(2)ライフイベントと継続就業における関係性は大きい、(3)フルタイム勤務者が適正な働き方をしなければ、短時間勤務者はフルタイム勤務へ戻るのは困難である、(4)短時間勤務者への管理職の評価尺度に課題があること、が見出された。",
+      "abstractLicenseFlag": "allow",
+      "dc:identifier": [
+        {
+          "@type": "cir:DOI",
+          "@value": "10.24544/ocu.20180403-037"
+        },
+        {
+          "@type": "cir:URI",
+          "@value": "https://ocu-omu.repo.nii.ac.jp/records/2016003"
+        },
+        {
+          "@type": "cir:NDL_BIB_ID",
+          "@value": "026256023"
+        },
+        {
+          "@type": "cir:URI",
+          "@value": "http://id.ndl.go.jp/bib/026256023"
+        },
+        {
+          "@type": "cir:URI",
+          "@value": "https://ndlsearch.ndl.go.jp/books/R000000004-I026256023"
+        },
+        {
+          "@type": "cir:NAID",
+          "@value": "110009886520"
+        },
+        {
+          "@type": "cir:URI",
+          "@value": "https://search.jamas.or.jp/link/ui/2015187269"
+        }
+      ],
+      "dc:subject": [
+        "フルタイム勤務者",
+        "短時間勤務者",
+        "看護職",
+        "協働"
+      ],
+      "dc:source": [
+        {
+          "@id": "https://ocu-omu.repo.nii.ac.jp/records/2016003"
+        },
+        {
+          "@id": "http://id.ndl.go.jp/bib/026256023"
+        },
+        {
+          "@id": "https://ndlsearch.ndl.go.jp/books/R000000004-I026256023"
+        },
+        {
+          "@id": "https://dlisv03.media.osaka-cu.ac.jp/il/meta_pub/G0000438repository_KJ00009658159"
+        },
+        {
+          "@id": "https://search.jamas.or.jp/link/ui/2015187269"
+        }
+      ]
+    },
+    {
+      "@id": "https://cir.nii.ac.jp/crid/1520299086521227776",
+      "@type": "item",
+      "title": "共働き子育て世帯の経済効果 : 女性のフルタイム勤務環境整備で、世帯収入の拡大余地あり",
+      "link": {
+        "@id": "https://cir.nii.ac.jp/crid/1520299086521227776"
+      },
+      "rdfs:seeAlso": {
+        "@id": "https://cir.nii.ac.jp/crid/1520299086521227776.json"
+      },
+      "dc:creator": [
+        "鹿庭 雄介"
+      ],
+      "dc:publisher": "東京 : 信金中央金庫",
+      "dc:type": "Article",
+      "prism:publicationName": "信金中金月報 / 信金中央金庫地域・中小企業研究所 編",
+      "prism:issn": "13469479",
+      "prism:volume": "23",
+      "prism:number": "1",
+      "prism:startingPage": "42",
+      "prism:endingPage": "50",
+      "prism:publicationDate": "2024-01",
+      "dc:identifier": [
+        {
+          "@type": "cir:NDL_BIB_ID",
+          "@value": "033283978"
+        },
+        {
+          "@type": "cir:URI",
+          "@value": "http://id.ndl.go.jp/bib/033283978"
+        },
+        {
+          "@type": "cir:URI",
+          "@value": "https://ndlsearch.ndl.go.jp/books/R000000004-I033283978"
+        }
+      ],
+      "dc:source": [
+        {
+          "@id": "http://id.ndl.go.jp/bib/033283978"
+        },
+        {
+          "@id": "https://ndlsearch.ndl.go.jp/books/R000000004-I033283978"
+        }
+      ]
+    },
+    {
+      "@id": "https://cir.nii.ac.jp/crid/1520012468128530816",
+      "@type": "item",
+      "title": "特集 最近の私傷病休職の留意点(下)復職後のフルタイム勤務が無理でも直ちに解雇はできない",
+      "link": {
+        "@id": "https://cir.nii.ac.jp/crid/1520012468128530816"
+      },
+      "rdfs:seeAlso": {
+        "@id": "https://cir.nii.ac.jp/crid/1520012468128530816.json"
+      },
+      "dc:publisher": "東京 : 日本労務研究会 ; [2010]-2025",
+      "dc:type": "Article",
+      "prism:publicationName": "人事労務実務のQ&A : 人事労務に関する最初で唯一のQ&A専門誌",
+      "prism:volume": "13",
+      "prism:number": "11",
+      "prism:startingPage": "22",
+      "prism:endingPage": "30",
+      "prism:publicationDate": "2022-11",
+      "dc:identifier": [
+        {
+          "@type": "cir:NDL_BIB_ID",
+          "@value": "032453342"
+        },
+        {
+          "@type": "cir:URI",
+          "@value": "http://id.ndl.go.jp/bib/032453342"
+        },
+        {
+          "@type": "cir:URI",
+          "@value": "https://ndlsearch.ndl.go.jp/books/R000000004-I032453342"
+        }
+      ],
+      "dc:source": [
+        {
+          "@id": "http://id.ndl.go.jp/bib/032453342"
+        },
+        {
+          "@id": "https://ndlsearch.ndl.go.jp/books/R000000004-I032453342"
+        }
+      ]
+    },
+    {
+      "@id": "https://cir.nii.ac.jp/crid/1520291855136050688",
+      "@type": "item",
+      "title": "伊勢丹 雇用延長・高齢者活用、エルダー社員制度--フルタイム勤務と変動時間勤務で対応〔含 質疑応答〕",
+      "link": {
+        "@id": "https://cir.nii.ac.jp/crid/1520291855136050688"
+      },
+      "rdfs:seeAlso": {
+        "@id": "https://cir.nii.ac.jp/crid/1520291855136050688.json"
+      },
+      "dc:creator": [
+        "久間 毅"
+      ],
+      "dc:publisher": "東京 : 労働開発研究会",
+      "dc:type": "Article",
+      "prism:publicationName": "労働法学研究会報",
+      "prism:issn": "13425064",
+      "prism:volume": "52",
+      "prism:number": "18",
+      "prism:startingPage": "1",
+      "prism:endingPage": "25",
+      "prism:publicationDate": "2001-07-01",
+      "dc:identifier": [
+        {
+          "@type": "cir:NDL_BIB_ID",
+          "@value": "5816321"
+        },
+        {
+          "@type": "cir:URI",
+          "@value": "http://id.ndl.go.jp/bib/5816321"
+        },
+        {
+          "@type": "cir:URI",
+          "@value": "https://ndlsearch.ndl.go.jp/books/R000000004-I5816321"
+        },
+        {
+          "@type": "cir:NAID",
+          "@value": "40003901940"
+        }
+      ],
+      "dc:source": [
+        {
+          "@id": "http://id.ndl.go.jp/bib/5816321"
+        },
+        {
+          "@id": "https://ndlsearch.ndl.go.jp/books/R000000004-I5816321"
+        }
+      ]
+    },
+    {
+      "@id": "https://cir.nii.ac.jp/crid/1520010379900491776",
+      "@type": "item",
+      "title": "事例 カゴメ フルタイム勤務で65歳まで更新可能 目標管理制度で評価に応じた賞与も支給",
+      "link": {
+        "@id": "https://cir.nii.ac.jp/crid/1520010379900491776"
+      },
+      "rdfs:seeAlso": {
+        "@id": "https://cir.nii.ac.jp/crid/1520010379900491776.json"
+      },
+      "dc:creator": [
+        "阿部 まさ子"
+      ],
+      "dc:publisher": "東京 : 産労総合研究所",
+      "dc:type": "Article",
+      "prism:publicationName": "企業と人材",
+      "prism:volume": "39",
+      "prism:number": "885",
+      "prism:startingPage": "26",
+      "prism:endingPage": "31",
+      "prism:publicationDate": "2006-07-20",
+      "dc:identifier": [
+        {
+          "@type": "cir:NDL_BIB_ID",
+          "@value": "8000160"
+        },
+        {
+          "@type": "cir:URI",
+          "@value": "http://id.ndl.go.jp/bib/8000160"
+        },
+        {
+          "@type": "cir:URI",
+          "@value": "https://ndlsearch.ndl.go.jp/books/R000000004-I8000160"
+        },
+        {
+          "@type": "cir:NAID",
+          "@value": "40007359993"
+        }
+      ],
+      "dc:source": [
+        {
+          "@id": "http://id.ndl.go.jp/bib/8000160"
+        },
+        {
+          "@id": "https://ndlsearch.ndl.go.jp/books/R000000004-I8000160"
+        }
+      ]
+    },
+    {
+      "@id": "https://cir.nii.ac.jp/crid/1521699228441662080",
+      "@type": "item",
+      "title": "イオン--有期雇用社員にも正社員と同一の人事制度を適用。フルタイム勤務が可能であればマネジメントも担える仕組みに",
+      "link": {
+        "@id": "https://cir.nii.ac.jp/crid/1521699228441662080"
+      },
+      "rdfs:seeAlso": {
+        "@id": "https://cir.nii.ac.jp/crid/1521699228441662080.json"
+      },
+      "dc:publisher": "東京 : 産労総合研究所",
+      "dc:type": "Article",
+      "prism:publicationName": "人事実務",
+      "prism:volume": "45",
+      "prism:number": "1035",
+      "prism:startingPage": "6",
+      "prism:endingPage": "11",
+      "prism:publicationDate": "2008-05-01",
+      "dc:identifier": [
+        {
+          "@type": "cir:NDL_BIB_ID",
+          "@value": "9468301"
+        },
+        {
+          "@type": "cir:URI",
+          "@value": "http://id.ndl.go.jp/bib/9468301"
+        },
+        {
+          "@type": "cir:URI",
+          "@value": "https://ndlsearch.ndl.go.jp/books/R000000004-I9468301"
+        },
+        {
+          "@type": "cir:NAID",
+          "@value": "40015990004"
+        }
+      ],
+      "dc:source": [
+        {
+          "@id": "http://id.ndl.go.jp/bib/9468301"
+        },
+        {
+          "@id": "https://ndlsearch.ndl.go.jp/books/R000000004-I9468301"
+        }
+      ]
+    },
+    {
+      "@id": "https://cir.nii.ac.jp/crid/1522825130325608320",
+      "@type": "item",
+      "title": "カゴメ--「フルタイム勤務のみ」で,65歳まで契約更新が可能な制度に改定",
+      "link": {
+        "@id": "https://cir.nii.ac.jp/crid/1522825130325608320"
+      },
+      "rdfs:seeAlso": {
+        "@id": "https://cir.nii.ac.jp/crid/1522825130325608320.json"
+      },
+      "dc:publisher": "東京 : 労務行政",
+      "dc:type": "Article",
+      "prism:publicationName": "労政時報 / 労務行政研究所 編",
+      "prism:issn": "13425250",
+      "prism:number": "3687",
+      "prism:startingPage": "51",
+      "prism:endingPage": "60",
+      "prism:publicationDate": "2006-10-13",
+      "dc:identifier": [
+        {
+          "@type": "cir:NDL_BIB_ID",
+          "@value": "8070601"
+        },
+        {
+          "@type": "cir:URI",
+          "@value": "http://id.ndl.go.jp/bib/8070601"
+        },
+        {
+          "@type": "cir:URI",
+          "@value": "https://ndlsearch.ndl.go.jp/books/R000000004-I8070601"
+        },
+        {
+          "@type": "cir:NAID",
+          "@value": "40007439277"
+        }
+      ],
+      "dc:source": [
+        {
+          "@id": "http://id.ndl.go.jp/bib/8070601"
+        },
+        {
+          "@id": "https://ndlsearch.ndl.go.jp/books/R000000004-I8070601"
+        }
+      ]
+    },
+    {
+      "@id": "https://cir.nii.ac.jp/crid/1521136279946898432",
+      "@type": "item",
+      "title": "ロフト--パートと正社員の区分を撤廃,短時間勤務も選択可能としたが,フルタイム勤務者が増加",
+      "link": {
+        "@id": "https://cir.nii.ac.jp/crid/1521136279946898432"
+      },
+      "rdfs:seeAlso": {
+        "@id": "https://cir.nii.ac.jp/crid/1521136279946898432.json"
+      },
+      "dc:publisher": "東京 : 労務行政",
+      "dc:type": "Article",
+      "prism:publicationName": "労政時報 / 労務行政研究所 編",
+      "prism:issn": "13425250",
+      "prism:number": "3789",
+      "prism:startingPage": "87",
+      "prism:endingPage": "94",
+      "prism:publicationDate": "2011-01-14",
+      "dc:identifier": [
+        {
+          "@type": "cir:NDL_BIB_ID",
+          "@value": "10926898"
+        },
+        {
+          "@type": "cir:URI",
+          "@value": "http://id.ndl.go.jp/bib/10926898"
+        },
+        {
+          "@type": "cir:URI",
+          "@value": "https://ndlsearch.ndl.go.jp/books/R000000004-I10926898"
+        },
+        {
+          "@type": "cir:NAID",
+          "@value": "40017416292"
+        }
+      ],
+      "dc:source": [
+        {
+          "@id": "http://id.ndl.go.jp/bib/10926898"
+        },
+        {
+          "@id": "https://ndlsearch.ndl.go.jp/books/R000000004-I10926898"
+        }
+      ]
+    },
+    {
+      "@id": "https://cir.nii.ac.jp/crid/1522543655457535232",
+      "@type": "item",
+      "title": "\"雇用エイジレス時代\"に突入! 高年齢者雇用制度の運用事例と今後の課題(第2回)76歳の技術専門職社員をフルタイム勤務で雇用する会社の例",
+      "link": {
+        "@id": "https://cir.nii.ac.jp/crid/1522543655457535232"
+      },
+      "rdfs:seeAlso": {
+        "@id": "https://cir.nii.ac.jp/crid/1522543655457535232.json"
+      },
+      "dc:creator": [
+        "大関 ひろ美"
+      ],
+      "dc:publisher": "東京 : 日本法令",
+      "dc:type": "Article",
+      "prism:publicationName": "ビジネスガイド",
+      "prism:volume": "50",
+      "prism:number": "17",
+      "prism:startingPage": "52",
+      "prism:endingPage": "59",
+      "prism:publicationDate": "2013-11",
+      "dc:identifier": [
+        {
+          "@type": "cir:NDL_BIB_ID",
+          "@value": "024935805"
+        },
+        {
+          "@type": "cir:URI",
+          "@value": "http://id.ndl.go.jp/bib/024935805"
+        },
+        {
+          "@type": "cir:URI",
+          "@value": "https://ndlsearch.ndl.go.jp/books/R000000004-I024935805"
+        },
+        {
+          "@type": "cir:NAID",
+          "@value": "40019829886"
+        }
+      ],
+      "dc:source": [
+        {
+          "@id": "http://id.ndl.go.jp/bib/024935805"
+        },
+        {
+          "@id": "https://ndlsearch.ndl.go.jp/books/R000000004-I024935805"
+        }
+      ]
+    }
+  ]
+}
