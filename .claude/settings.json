@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "deny": [
+      "Read(./divergence_module/.env)",
+      "Read(**/.env)",
+      "Read(**/.env.*)"
+    ]
+  }
+}
